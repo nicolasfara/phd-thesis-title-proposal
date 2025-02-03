@@ -1,0 +1,297 @@
+% This is samplepaper.tex, a sample chapter demonstrating the
+% LLNCS macro package for Springer Computer Science proceedings;
+% Version 2.21 of 2022/01/12
+%
+\documentclass[runningheads]{llncs}
+%
+\usepackage[T1]{fontenc}
+% T1 fonts will be used to generate the final print and online PDFs,
+% so please use T1 fonts in your manuscript whenever possible.
+% Other font encondings may result in incorrect characters.
+%
+\usepackage{graphicx}
+% Used for displaying a sample figure. If possible, figure files should
+% be included in EPS format.
+%
+% If you use the hyperref package, please uncomment the following two lines
+% to display URLs in blue roman font according to Springer's eBook style:
+%\usepackage{color}
+%\renewcommand\UrlFont{\color{blue}\rmfamily}
+%
+
+\begin{document}
+
+%
+\title{PhD Cycle 39 --- First Year Final Report
+%\thanks{Supported by organization x.}
+}
+%
+%\titlerunning{Abbreviated paper title}
+% If the paper title is too long for the running head, you can set
+% an abbreviated paper title here
+%
+\author{Nicolas Farabegoli\inst{1}\orcidID{0000-0002-7321-358X}}
+%
+%\authorrunning{F. Author et al.}
+% First names are abbreviated in the running head.
+% If there are more than two authors, 'et al.' is used.
+%
+\institute{
+    Alma Mater Studiorum -- Università di Bologna, Cesena FC 47522, Italy
+    \email{nicolas.farabegoli@unibo.it}
+}
+%
+\maketitle              % typeset the header of the contribution
+%
+% \begin{abstract}
+% The abstract should briefly summarize the contents of the paper in
+% 150--250 words.
+
+% \keywords{First keyword  \and Second keyword \and Another keyword.}
+% \end{abstract}
+%
+%
+%
+\section{Research Activities and Outcomes}
+
+The first year of my PhD has been focused on the extension and development of approaches to foster \emph{deployment independence} of Collective Adaptive Systems (CAS)~\cite{DBLP:conf/birthday/BucchiaroneM19} in emergent and dynamic environments like the Edge-cloud Continuum~\cite{DBLP:journals/access/MoreschiniPLNHT22}.
+%
+During this research activities,
+I was able to publish and submit two relevant papers in high-quality journals,
+and published and presented many papers in conferences and workshops.
+%
+Moreover,
+I've been involved in tutoring activities and attended several PhD courses and school to improve my research skills and knowledge.
+
+\subsection{PhD Scope}
+
+The main goal of my PhD is to develop and investigate innovative engineering approaches to develop and deploy CAS.
+%
+More specifically,
+I aim to develop models and techniques to simplify the deployment of collective systems in emergent and dynamic environments,
+taking as a reference the Edge-cloud Continuum~\cite{DBLP:journals/access/MoreschiniPLNHT22}.
+
+The main goal is to provide a comprehensive and effective framework to fully exploit edge-cloud resources to support the execution of modern CAS,
+and to provide runtime support for the dynamic reconfiguration and adaptation of the system to changing conditions,
+dealing with device heterogeneity and network instability.
+
+AI-based techniques may be employed to support the system's reconfiguration preserving self-organisation and self-stabilisation properties,
+and to provide effective way to manage the system's reconfiguration at runtime by devising policies and strategies otherwise difficult to implement with traditional approaches.
+
+
+The research activities are framed in the context of the \emph{Aggregate Computing} paradigm~\cite{DBLP:journals/computer/BealPV15},
+a novel approach to engineer CAS based on the concept of \emph{computational fields},
+where the system's behavior emerges from the interaction of autonomous and distributed components.
+
+\subsection{Scientific Contributions and Activities}
+
+My first year started with a natural progression of my Master's thesis,
+where I developed a practical framework to implement the pulverisation model~\cite{DBLP:journals/fi/CasadeiPPVW20,DBLP:journals/iotj/CasadeiFPPSV22}--
+a modern approach to partition the execution model of CAS into independent components--
+and extended it to support dynamic components' relocation over the infrastructure at runtime.
+%
+The proposed framework has been validated through a set of experiments,
+showing the feasibility of the approach and the benefits in terms of deployment independence and non-functional properties,
+such as cost,
+power consumption,
+and performance.
+
+Subsequently,
+I investigate new reconfiguration approaches shifting from local reconfiguration rules to a global perspective,
+where the system's reconfiguration is expressed by a collective program,
+leveraging \emph{Aggregate Computing}.
+%
+In this contribution,
+I proposed a general pulverisation framework architecture where dynamic components' reconfiguration is captured as a first-class citizen,
+and I proposed a novel (collective) algorithm to balance the system's load during the reconfiguration process.
+%
+The proposed approach has been validated through a set of experiments,
+showing that the proposed algorithm can better adapt to disruptive and changing conditions,
+and it can provide better performance and stability compared to allocations defined a priori.
+
+Then,
+a semi-formalisation of a novel approach to support the pulverisation component's relocation based on Reinforcement Learning (RL) and Graph Neural Networks (GNN) has been developed.
+%
+This vision aims to pave the way for the development of intelligent CAS in modern infrastructures,
+where the system's reconfiguration is driven by AI-based techniques.
+
+An orthogonal contribution w.r.t. the pulverisation model has been developed to partition the program specification of CAS into independent functions (or services).
+%
+This approach aims to provide a more flexible and fine-grained approach to partition the system's program specification,
+and it has been validated through a set of experiments,
+showing both empirically and formally that the proposed approach preserves the same functional behavior of the original (monolithic deployed) system,
+and it can provide non-functional benefits in terms of power consumption and performance.
+
+Finally,
+I've been involved in other works and collaborations with other PhD students and researchers
+in the development and evaluation of coordination algorithms for UAVs,
+and in the development of a novel federated learning approach.
+%
+All these activities can be framed in my research direction opening new research perspectives and collaborations,
+and they have been beneficial to my research growth and knowledge.
+
+
+% During the first year of my PhD,
+% I focused on developing innovative models to enhance the deployment independence of collective adaptive systems (CAS).
+% %
+% Building upon previous work on pulverisation~\cite{DBLP:journals/iotj/CasadeiFPPSV22,DBLP:journals/fi/CasadeiPPVW20}--a modern approach to partitioning the execution model of CAS into independent components--
+% I proposed a practical framework that implements and extends the pulverisation model to support dynamic components' relocation over the infrastructure at runtime.
+
+% To validate the proposed framework and the extended model with reconfiguration rules,
+% I conducted a series of experiments.
+% %
+% These experiments demonstrated the feasibility of the approach and highlighted its benefits in terms of deployment independence and non-functional properties,
+% such as cost,
+% power consumption,
+% and performance.
+% %
+% The results of this research have been published in a paper submitted to the \emph{Future Generation Computer Systems} journal~\cite{DBLP:journals/fgcs/FarabegoliPCV24}.
+
+% During the first year of my PhD,
+% I have been working on the development of innovative models fostering the deployment independence of collective adaptive systems (CAS).
+
+% In particular,
+% based on previous work on the pulverisation~\cite{DBLP:journals/iotj/CasadeiFPPSV22,DBLP:journals/fi/CasadeiPPVW20} --
+% a modern approach to partition into independent components the execution model of CAS --
+% I proposed a practical framework implementing the pulverisation model,
+% and extending it to support the dynamic reconfiguration at runtime.
+% %
+% The proposed framework and the extended model with reconfiguration rules have been validated through a set of experiments,
+% showing the feasibility of the approach and the benefits in terms of deployment independence and non-functional properties,
+% like cost, power consumption, and performance.
+% %
+% The results of the experiments have been published in a paper submitted to the journal \emph{Future Generation Computer Systems journal}~\cite{DBLP:journals/fgcs/FarabegoliPCV24}.
+
+% Subsequently,
+% I have been working on the development of a novel approach to better support the dynamic reconfiguration of CAS based on the pulverisation model:
+% pre-defined reconfiguration rules may not be sufficient to cover all possible scenarios,
+% and they may lead to suboptimal solutions,
+% like oscillator behaviors.
+% %
+% To address this issue,
+% I proposed to shift the perspective from local reconfiguration rules to a global perspective,
+% where the system's reconfiguration is expressed by a collective program,
+% leveraging \emph{Aggregate Computing}.
+% %
+% In this contribution,
+% I proposed a general pulverisation framework architecture where dynamic components' reconfiguration is captured as a first-class citizen,
+% and I proposed a novel (collective) algorithm to balance the system's load during the reconfiguration process.
+% %
+% The proposed approach has been validated through a set of experiments,
+% showing that the proposed algorithm can better adapt to disruptive and changing conditions,
+% and it can provide better performance and stability compared to allocations defined a priori.
+% %
+% The results of the experiments and the proposed approach have been submitted and currently under review to the journal \emph{Internet of Things; Engineering Cyber Physical Human Systems}~\cite{farabegoli4798700dynamic}.
+
+% Finally,
+% I worked on the development of a novel approach to partition the program specification of CAS into independent functions (or services) to achieve flexible deployment in the \emph{Edge-cloud Continuum}.
+% %
+% This contribution is orthogonal to the pulverisation model,
+% and it aims to provide a more flexible and fine-grained approach to partition the system's program specification.
+% %
+% The proposed model has been formalised via an operational semantics,
+% and properties like self-stabilisation preservation, and deployment independence have been formally proved.
+% %
+% The new model has been validated through a set of experiments,
+% showing empirically that the proposed approach preserves the same functional behavior of the original (monolithic deployed) system,
+% and it can provide non-functional benefits in terms of power consumption and performance by paying a small overhead in terms of communication.
+% %
+% The results of the experiments and the proposed approach have been accepted and presented at the \emph{ACSOS 2024} conference~\cite{DBLP:conf/acsos/FarabegoliFAVE24}.
+
+% Aside from my main research activities,
+% I've been involved in other works and collaborations with other PhD students and researchers,
+% in the development and evaluation of coordination algorithms for UAVs,
+% and in the development of a novel federated learning approach.
+% %
+% All these activities can be framed in my research direction opening new research perspectives and collaborations,
+% and they have been beneficial to my research growth and knowledge.
+
+\subsection{Publications}
+
+As a result of my research activities,
+I've published and submitted the following papers:
+
+\begin{enumerate}
+    \item Nicolas Farabegoli, Danilo Pianini, Roberto Casadei, \& Mirko Viroli (2024). Scalability through Pulverisation: Declarative deployment reconfiguration at runtime. Future Gener. Comput. Syst., 161, 545–558.    
+    \item Farabegoli, N., Pianini, D., Casadei, R., \& Viroli, M. (2024). Dynamic Iot Deployment Reconfiguration: A Global-Level Self-Organisation Approach. Internet of Things Journal, Elsevier (submitted).
+    \item Davide Domini, Nicolas Farabegoli, Gianluca Aguzzi, \& Mirko Viroli (2024). Towards Intelligent Pulverized Systems: a Modern Approach for Edge-Cloud Services. In Proceedings of the 25th Workshop "From Objects to Agents", Bard (Aosta), Italy, July 8-10, 2024 (pp. 233–251). CEUR-WS.org.
+    \item Nicolas Farabegoli, Mirko Viroli, \& Roberto Casadei (2024). Flexible Self-organisation for the Cloud-Edge Continuum: a Macro-programming Approach. In IEEE International Conference on Autonomic Computing and Self-Organizing Systems, ACSOS 2024, Denmark, Aarhus, September 16-20, 2024. IEEE (to appear).
+    \item Denys Grushchak, Jenna Kline, Danilo Pianini, Nicolas Farabegoli, Martina Baiardi, Gianluca Aguzzi, \& Christopher Stewart (2024). Decentralized Multi-Drone Coordination for Wildlife Video Acquisition. In IEEE International Conference on Autonomic Computing and Self-Organizing Systems, ACSOS 2024, Denmark, Aarhus, September 16-20, 2024. IEEE (to appear).   
+    \item Davide Domini, Gianluca Aguzzi, Nicolas Farabegoli, Mirko Viroli, \& Lukas Esterle (2024). Opportunistic Fully-Distributed Federated Learning. In IEEE International Conference on Autonomic Computing and Self-Organizing Systems, ACSOS 2024, Denmark, Aarhus, September 16-20, 2024. IEEE (to appear).
+    \item Denys Grushchak, Jenna Kline, Danilo Pianini, \& Nicolas Farabegoli (2024). An Agent-based Model of Directional Multi-herds. In IEEE International Conference on Autonomic Computing and Self-Organizing Systems, ACSOS 2024, Denmark, Aarhus, September 16-20, 2024. IEEE (to appear).
+    \item Nicolas Farabegoli (2024). Intelligent Pulverised Collective-adaptive Systems. In IEEE International Conference on Autonomic Computing and Self-Organizing Systems, ACSOS 2024, Denmark, Aarhus, September 16-20, 2024. IEEE (to appear).
+\end{enumerate}
+
+\subsection{Conferences and Workshops}
+
+During this first year of my PhD,
+I've attended the following conferences and workshops:
+
+\begin{enumerate}
+    \item \emph{International ABS Workshop 2023} -- attended;
+    \item \emph{Workshop ``From Objects to Agents'' 2024} -- 1 paper accepted and presented;
+    \item \emph{ACM SIGPLAN International Conference on Functional Programming} -- attended;
+    \item \emph{IEEE International Conference on Autonomic Computing and Self-Organizing Systems - ACSOS 2024} -- 5 papers accepted and 2 papers presented;
+\end{enumerate}
+
+% \subsection{Research Goals}
+
+% \subsection{Literature Review}
+
+\section{Academic Activities}
+
+\subsection{Tutoring Activities}
+
+In this first year of my PhD,
+I have been involved in tutoring activities for the course \textbf{PROGRAMMAZIONE AD OGGETTI [cod. 70219]} for the Bachelor's Degree in Computer Science and Engineering for the academic year 2023/2024,
+and currently involved in the academic year 2024/2025 edition of the same course.
+
+\subsection{Doctoral School and Courses}
+
+I've attended the \textbf{Bertinoro International Spring School 2024} in March 2024,
+in particular I've attended the \emph{Graph Neural Network} course by Prof. Fabrizio Silvestri,
+the \emph{Program analysis: from proving correctness to proving incorrectness} course by Prof. Roberto Bruni and Robera Gori,
+and the \emph{Large Language Models} course by Prof. Danilo Croce.
+%
+Moreover,
+I've attended the following PhD courses:
+\begin{enumerate}
+    \item \emph{How to Write and Publish a Research Paper in Computer Science and Engineering} by Prof. Zeynep Kiziltan;
+    \item \emph{Risk Assessment of Machine Learning for Cybersecurity} by Prof. Fabio Pierazzi;
+    \item \emph{Introduction to complex systems science} by Prof. Andrea Roli;
+\end{enumerate}
+At the end of the first year,
+I've obtained \textbf{15} CFU with evaluation, and \textbf{4} CFU without evaluation.
+
+\section{Self Evaluation}
+
+I strongly believe that the first year of my PhD has been very productive and successful.
+%
+Despite initial difficulties in getting my works accepted in conferences and journals,
+I've been able to publish and submit three papers in high-quality venues,
+and I've been able to collaborate with other researchers and PhD students in different research areas.
+%
+During this year,
+I've been able to improve my research skills,
+and I've been able to learn new techniques and methodologies to address research problems,
+get familiar with new research tools and environments,
+and improve my writing and presentation skills.
+
+\section{Next Year Plan}
+
+For the next year,
+I plan to continue my research activities on the development of innovative models for engineering collective adaptive systems,
+focusing on the integration of techniques to support comprehensive and effective reconfiguration strategies,
+and investigate the integration of multi-tier programming models to support the deployment of CAS in the Edge-cloud Continuum.
+
+%
+% ---- Bibliography ----
+%
+% BibTeX users should specify bibliography style 'splncs04'.
+% References will then be sorted and formatted in the correct style.
+%
+% \nocite{*}
+\bibliographystyle{splncs04}
+\bibliography{bibliography}
+
+\end{document}
