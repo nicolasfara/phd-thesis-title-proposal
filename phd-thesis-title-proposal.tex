@@ -10,6 +10,7 @@
 % Other font encondings may result in incorrect characters.
 %
 \usepackage{graphicx}
+\usepackage[backend=biber,style=lncs]{biblatex} 
 % Used for displaying a sample figure. If possible, figure files should
 % be included in EPS format.
 %
@@ -18,6 +19,8 @@
 %\usepackage{color}
 %\renewcommand\UrlFont{\color{blue}\rmfamily}
 %
+\addbibresource{bibliography.bib}
+\addbibresource{mypubblications.bib}
 
 \begin{document}
 
@@ -228,16 +231,24 @@ and they have been beneficial to my research growth and knowledge.
 As a result of my research activities,
 I've published and submitted the following papers:
 
-\begin{enumerate}
-    \item Nicolas Farabegoli, Danilo Pianini, Roberto Casadei, \& Mirko Viroli (2024). Scalability through Pulverisation: Declarative deployment reconfiguration at runtime. Future Gener. Comput. Syst., 161, 545–558.    
-    \item Farabegoli, N., Pianini, D., Casadei, R., \& Viroli, M. (2024). Dynamic Iot Deployment Reconfiguration: A Global-Level Self-Organisation Approach. Internet of Things Journal, Elsevier (submitted).
-    \item Davide Domini, Nicolas Farabegoli, Gianluca Aguzzi, \& Mirko Viroli (2024). Towards Intelligent Pulverized Systems: a Modern Approach for Edge-Cloud Services. In Proceedings of the 25th Workshop "From Objects to Agents", Bard (Aosta), Italy, July 8-10, 2024 (pp. 233–251). CEUR-WS.org.
-    \item Nicolas Farabegoli, Mirko Viroli, \& Roberto Casadei (2024). Flexible Self-organisation for the Cloud-Edge Continuum: a Macro-programming Approach. In IEEE International Conference on Autonomic Computing and Self-Organizing Systems, ACSOS 2024, Denmark, Aarhus, September 16-20, 2024. IEEE (to appear).
-    \item Denys Grushchak, Jenna Kline, Danilo Pianini, Nicolas Farabegoli, Martina Baiardi, Gianluca Aguzzi, \& Christopher Stewart (2024). Decentralized Multi-Drone Coordination for Wildlife Video Acquisition. In IEEE International Conference on Autonomic Computing and Self-Organizing Systems, ACSOS 2024, Denmark, Aarhus, September 16-20, 2024. IEEE (to appear).   
-    \item Davide Domini, Gianluca Aguzzi, Nicolas Farabegoli, Mirko Viroli, \& Lukas Esterle (2024). Opportunistic Fully-Distributed Federated Learning. In IEEE International Conference on Autonomic Computing and Self-Organizing Systems, ACSOS 2024, Denmark, Aarhus, September 16-20, 2024. IEEE (to appear).
-    \item Denys Grushchak, Jenna Kline, Danilo Pianini, \& Nicolas Farabegoli (2024). An Agent-based Model of Directional Multi-herds. In IEEE International Conference on Autonomic Computing and Self-Organizing Systems, ACSOS 2024, Denmark, Aarhus, September 16-20, 2024. IEEE (to appear).
-    \item Nicolas Farabegoli (2024). Intelligent Pulverised Collective-adaptive Systems. In IEEE International Conference on Autonomic Computing and Self-Organizing Systems, ACSOS 2024, Denmark, Aarhus, September 16-20, 2024. IEEE (to appear).
-\end{enumerate}
+
+\begin{refsection}[mypubblications.bib]
+    % \DeclareFieldFormat{labelnumberwidth}{}
+    \nocite{*} % Include all references from file1.bib only
+    \printbibliography[heading=none]
+\end{refsection}
+
+% \begin{enumerate}
+
+%     \item Nicolas Farabegoli, Danilo Pianini, Roberto Casadei, \& Mirko Viroli (2024). Scalability through Pulverisation: Declarative deployment reconfiguration at runtime. Future Gener. Comput. Syst., 161, 545–558.    
+%     \item Farabegoli, N., Pianini, D., Casadei, R., \& Viroli, M. (2024). Dynamic Iot Deployment Reconfiguration: A Global-Level Self-Organisation Approach. Internet of Things Journal, Elsevier (submitted).
+%     \item Davide Domini, Nicolas Farabegoli, Gianluca Aguzzi, \& Mirko Viroli (2024). Towards Intelligent Pulverized Systems: a Modern Approach for Edge-Cloud Services. In Proceedings of the 25th Workshop "From Objects to Agents", Bard (Aosta), Italy, July 8-10, 2024 (pp. 233–251). CEUR-WS.org.
+%     \item Nicolas Farabegoli, Mirko Viroli, \& Roberto Casadei (2024). Flexible Self-organisation for the Cloud-Edge Continuum: a Macro-programming Approach. In IEEE International Conference on Autonomic Computing and Self-Organizing Systems, ACSOS 2024, Denmark, Aarhus, September 16-20, 2024. IEEE (to appear).
+%     \item Denys Grushchak, Jenna Kline, Danilo Pianini, Nicolas Farabegoli, Martina Baiardi, Gianluca Aguzzi, \& Christopher Stewart (2024). Decentralized Multi-Drone Coordination for Wildlife Video Acquisition. In IEEE International Conference on Autonomic Computing and Self-Organizing Systems, ACSOS 2024, Denmark, Aarhus, September 16-20, 2024. IEEE (to appear).   
+%     \item Davide Domini, Gianluca Aguzzi, Nicolas Farabegoli, Mirko Viroli, \& Lukas Esterle (2024). Opportunistic Fully-Distributed Federated Learning. In IEEE International Conference on Autonomic Computing and Self-Organizing Systems, ACSOS 2024, Denmark, Aarhus, September 16-20, 2024. IEEE (to appear).
+%     \item Denys Grushchak, Jenna Kline, Danilo Pianini, \& Nicolas Farabegoli (2024). An Agent-based Model of Directional Multi-herds. In IEEE International Conference on Autonomic Computing and Self-Organizing Systems, ACSOS 2024, Denmark, Aarhus, September 16-20, 2024. IEEE (to appear).
+%     \item Nicolas Farabegoli (2024). Intelligent Pulverised Collective-adaptive Systems. In IEEE International Conference on Autonomic Computing and Self-Organizing Systems, ACSOS 2024, Denmark, Aarhus, September 16-20, 2024. IEEE (to appear).
+% \end{enumerate}
 
 \subsection{Conferences and Workshops}
 
@@ -308,7 +319,8 @@ and investigate the integration of multi-tier programming models to support the 
 % References will then be sorted and formatted in the correct style.
 %
 % \nocite{*}
-\bibliographystyle{splncs04}
-\bibliography{bibliography}
+% \bibliographystyle{splncs04}
+% \bibliography{bibliography,mypubblications}
+\printbibliography
 
 \end{document}
