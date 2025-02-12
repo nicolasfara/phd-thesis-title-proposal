@@ -18,3 +18,10 @@ It consists of the following files:
   llncsdoc.pdf       the documentation of the class (PDF version)
 
   splncs04.bst       current LNCS BibTeX style with alphabetic sorting
+
+  ## Title proposals
+
+  - Engineering Collective Systems in the Wearable Edge-Cloud Continuum: An End-to-End Scalable Approach
+  - Engineering Collective Systems in the Wearable Edge-Cloud Continuum: An End-to-End Flexible Approach
+  - Flexible Engineering Framework for Collective Systems in the Wearable Edge-Cloud Continuum
+  - Scalable Model for Engineering Collective Systems in Wearable Edge-Cloud Infrastructures
