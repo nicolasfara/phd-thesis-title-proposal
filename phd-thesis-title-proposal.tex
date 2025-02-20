@@ -10,6 +10,7 @@
 % Other font encondings may result in incorrect characters.
 %
 \usepackage{graphicx}
+\usepackage{acronym}
 \usepackage[backend=biber,style=lncs]{biblatex} 
 % Used for displaying a sample figure. If possible, figure files should
 % be included in EPS format.
@@ -22,18 +23,22 @@
 \addbibresource{bibliography.bib}
 \addbibresource{mypubblications.bib}
 
+\acrodef{cas}[CAS]{Collective Adaptive Systems}
+\acrodef{iot}[IoT]{Internet of Things}
+\acrodef{ecc}[ECC]{Edge-Cloud Continuum}
+
 \begin{document}
 
 %
-\title{PhD Thesis Proposal -- Cycle 39\\\vspace{0.5em}Engineering Collective Systems in the Wearable Edge-Cloud Continuum: An End-to-End Scalable Approach
+\title{{\normalfont PhD Thesis Proposal}\\\vspace{0.1em}Engineering Collective Systems in the Wearable Edge-Cloud Continuum: Models and Platforms
 %\thanks{Supported by organization x.}
 }
 %
-%\titlerunning{Abbreviated paper title}
+\titlerunning{PhD Thesis Proposal -- Cycle 39}
 % If the paper title is too long for the running head, you can set
 % an abbreviated paper title here
 %
-\author{Nicolas Farabegoli\inst{1}\orcidID{0000-0002-7321-358X}}
+\author{Nicolas Farabegoli\inst{1}\orcidID{0000-0002-7321-358X}\\Cycle 39 -- Computer Science and Engineering} %\inst{1}\orcidID{0000-0002-7321-358X}}
 %
 %\authorrunning{F. Author et al.}
 % First names are abbreviated in the running head.
@@ -72,6 +77,66 @@ and dynamic system reconfiguration.
 % \keywords{First keyword  \and Second keyword \and Another keyword.}
 \end{abstract}
 
+\section{Introduction}
+\label{sec:introduction}
+
+This manuscript presents the research activities carried out during the first year of my PhD,
+and outlines the future research directions of my research.
+
+The main goal of my PhD is to develop and investigate innovative engineering approaches to develop and deploy \ac{cas}~\cite{} in emergent and dynamic environments,
+like the \ac{ecc}~\cite{DBLP:journals/access/MoreschiniPLNHT22}.
+%
+With this research line I aim to provide a general but effective framework supporting the entire workflow of \ac{cas},
+from the design models,
+to the deployment and runtime management of the system,
+up to the system's reconfiguration and adaptation to changing conditions.
+
+Smart cities~\cite{},
+\ac{iot} applications~\cite{},
+swarm robotics~\cite{},
+exhibit the common trait of being composed of many interconnected devices,
+each with its own capabilities and constraints,
+and that must \emph{cooperatively} interact,
+while adapting coherently as a whole to dynamic environments.
+%
+The new opportunities offered by the \ac{ecc} infrastructures paved the way for the development of new applications and services,
+but they shift the focus from the traditional two tier vision to a more complex,
+multitier~\cite{DBLP:journals/csur/WeisenburgerWS20} heterogeneous environment.
+
+The \emph{aggregate computing} approach~\cite{} to \ac{cas} engineering,
+comprises a \emph{macro-programming} model and language~\cite{} based on computational fields~\cite{},
+where the system's behavior is described in terms of functional composition of these fields.
+%
+This paradigm provides a high-level of abstraction to engineer \ac{cas},
+and has been successfully applied to a wide range of applications,
+from smart cities to swarm robotics,
+assuming homogeneous fully peer-to-peer networks.
+%
+Pulverization~\cite{} defines a partitioning model for neatly separate the self-organising behavior of the system from the actual deployment.
+%
+This approach preserves the same functional behavior of the original system,
+enabling the system to be deployed in different infrastructures opening the door to the \ac{ecc}.
+%
+This foundational work represents the starting point of my research activities,
+which is founded by the Italian PRIN project ``CommonWears'' (2020HCWWLP).
+
+With this thesis,
+I aim to extend the current state of the art by providing a comprehensive framework to support the design and deployment of \ac{cas} in the \ac{ecc},
+leveraging the principles of self-organisation to define the collective and collaborative behavior of the system,
+multi-tier programming models to handle the heterogeneity of the infrastructure producing sound system specifications,
+and AI-driven techniques like reinforcement learning for dynamic resource management,
+predictive scaling,
+and dynamic system reconfiguration.
+
+The manuscript is structured as follows:
+TBD.
+
+\subsection{Research Gap}
+\label{sec:research-gap}
+
+\section{Background}
+\label{sec:background}
+
 \section{Research Activities and Outcomes}
 
 The first year of my PhD has been focused on the extension and development of approaches to foster \emph{deployment independence} of Collective Adaptive Systems (CAS)~\cite{DBLP:conf/birthday/BucchiaroneM19} in emergent and dynamic environments like the Edge-cloud Continuum~\cite{DBLP:journals/access/MoreschiniPLNHT22}.
@@ -84,24 +149,6 @@ Moreover,
 I've been involved in tutoring activities and attended several PhD courses and school to improve my research skills and knowledge.
 
 \subsection{PhD Scope}
-
-The main goal of my PhD is to develop and investigate innovative engineering approaches to develop and deploy CAS.
-%
-More specifically,
-I aim to develop models and techniques to simplify the deployment of collective systems in emergent and dynamic environments,
-taking as a reference the Edge-cloud Continuum~\cite{DBLP:journals/access/MoreschiniPLNHT22}.
-
-The main goal is to provide a comprehensive and effective framework to fully exploit edge-cloud resources to support the execution of modern CAS,
-and to provide runtime support for the dynamic reconfiguration and adaptation of the system to changing conditions,
-dealing with device heterogeneity and network instability.
-
-AI-based techniques may be employed to support the system's reconfiguration preserving self-organisation and self-stabilisation properties,
-and to provide effective way to manage the system's reconfiguration at runtime by devising policies and strategies otherwise difficult to implement with traditional approaches.
-
-
-The research activities are framed in the context of the \emph{Aggregate Computing} paradigm~\cite{DBLP:journals/computer/BealPV15},
-a novel approach to engineer CAS based on the concept of \emph{computational fields},
-where the system's behavior emerges from the interaction of autonomous and distributed components.
 
 \subsection{Scientific Contributions and Activities}
 
