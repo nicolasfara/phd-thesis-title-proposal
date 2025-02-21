@@ -28,6 +28,7 @@
 \acrodef{iot}[IoT]{Internet of Things}
 \acrodef{ecc}[ECC]{Edge-Cloud Continuum}
 \acrodef{rl}[RL]{Reinforcement Learning}
+\acrodef{gnn}[GNN]{Graph Neural Networks}
 
 \begin{document}
 
@@ -286,6 +287,34 @@ Such adaptability is essential for collective systems that must respond to chang
 \subsection{Collective Adaptive Systems}
 \label{sec:cas}
 
+\Ac{cas} refer to large-scale systems composed of multiple autonomous and interacting entities that collectively respond and adapt to dynamic environments.
+%
+These systems are characterized by their decentralized control,
+emergent behavior,
+and the ability to self-organise,
+making them suitable for scenarios where centralized coordination is infeasible.
+
+Key properties of \ac{cas} include autonomy,
+where individual components operate independently;
+collaboration,
+where entities work together to achieve shared goals;
+and adaptability,
+allowing the system to adjust its behavior in response to changing conditions~\cite{DBLP:conf/birthday/BucchiaroneM19}.
+%
+Examples of \acp{cas} can be found in natural systems such as ant colonies and neural networks,
+as well as in artificial systems like sensor networks,
+swarm robotics,
+and smart cities~\cite{DBLP:books/daglib/0023784}.
+
+In recent research,
+\acp{cas} is increasingly applied to large-scale computing infrastructures,
+where components must collaborate to optimize resource utilization,
+ensure fault tolerance,
+and maintain performance under variable workloads.
+%
+This is particularly relevant in the context of the \ac{ecc},
+where adaptive resource allocation and dynamic task migration are essential for balancing latency and computational demands.
+
 \subsection{Aggregate Computing}
 \label{sec:aggregate-computing}
 
@@ -336,7 +365,7 @@ showing that the proposed algorithm can better adapt to disruptive and changing 
 and it can provide better performance and stability compared to allocations defined a priori.
 
 Then,
-a semi-formalisation of a novel approach to support the pulverisation component's relocation based on Reinforcement Learning (RL) and Graph Neural Networks (GNN) has been developed.
+a semi-formalisation of a novel approach to support the pulverisation component's relocation based on \ac{rl} and \ac{gnn} has been developed.
 %
 This vision aims to pave the way for the development of intelligent CAS in modern infrastructures,
 where the system's reconfiguration is driven by AI-based techniques.
