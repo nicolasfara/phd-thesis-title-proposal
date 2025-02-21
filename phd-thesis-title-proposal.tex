@@ -11,7 +11,8 @@
 %
 \usepackage{graphicx}
 \usepackage{acronym}
-\usepackage[backend=biber,style=lncs]{biblatex} 
+\usepackage[backend=biber,style=lncs]{biblatex}
+\usepackage{cleveref}
 % Used for displaying a sample figure. If possible, figure files should
 % be included in EPS format.
 %
@@ -26,6 +27,7 @@
 \acrodef{cas}[CAS]{Collective Adaptive Systems}
 \acrodef{iot}[IoT]{Internet of Things}
 \acrodef{ecc}[ECC]{Edge-Cloud Continuum}
+\acrodef{rl}[RL]{Reinforcement Learning}
 
 \begin{document}
 
@@ -79,65 +81,167 @@ and dynamic system reconfiguration.
 
 \section{Introduction}
 \label{sec:introduction}
+The rapid proliferation of interconnected devices in environments such as smart cities,
+IoT ecosystems,
+wearable devices,
+and swarm robotics has introduced new challenges in system design and management.
+%
+These systems,
+characterized by numerous devices with varying capabilities and constraints,
+must interact cooperatively and adaptively in dynamic environments.
+%
+Traditional cloud-based solutions,
+limited by latency and bandwidth constraints,
+are increasingly being replaced by the \ac{ecc}~\cite{DBLP:journals/access/MoreschiniPLNHT22},
+which enables distributed computing across multiple tiers.
 
-This manuscript presents the research activities carried out during the first year of my PhD,
-and outlines the future research directions of my research.
-
-The main goal of my PhD is to develop and investigate innovative engineering approaches to develop and deploy \ac{cas}~\cite{} in emergent and dynamic environments,
-like the \ac{ecc}~\cite{DBLP:journals/access/MoreschiniPLNHT22}.
+This research aims to develop innovative approaches for engineering \ac{cas}~\cite{DBLP:conf/birthday/BucchiaroneM19} within the \ac{ecc}.
 %
-With this research line I aim to provide a general but effective framework supporting the entire workflow of \ac{cas},
-from the design models,
-to the deployment and runtime management of the system,
-up to the system's reconfiguration and adaptation to changing conditions.
-
-Smart cities~\cite{},
-\ac{iot} applications~\cite{},
-swarm robotics~\cite{},
-exhibit the common trait of being composed of many interconnected devices,
-each with its own capabilities and constraints,
-and that must \emph{cooperatively} interact,
-while adapting coherently as a whole to dynamic environments.
+The proposed framework will support the entire \ac{cas} workflow,
+from design and deployment to runtime management and adaptation.
 %
-The new opportunities offered by the \ac{ecc} infrastructures paved the way for the development of new applications and services,
-but they shift the focus from the traditional two tier vision to a more complex,
-multitier~\cite{DBLP:journals/csur/WeisenburgerWS20} heterogeneous environment.
-
-The \emph{aggregate computing} approach~\cite{} to \ac{cas} engineering,
-comprises a \emph{macro-programming} model and language~\cite{} based on computational fields~\cite{},
-where the system's behavior is described in terms of functional composition of these fields.
+By leveraging self-organization principles,
+the framework will ensure coherent collective behavior,
+while multitier~\cite{DBLP:journals/csur/WeisenburgerWS20} programming models will address the heterogeneity and layered characteristics of modern infrastructures.
 %
-This paradigm provides a high-level of abstraction to engineer \ac{cas},
-and has been successfully applied to a wide range of applications,
-from smart cities to swarm robotics,
-assuming homogeneous fully peer-to-peer networks.
-%
-Pulverization~\cite{} defines a partitioning model for neatly separate the self-organising behavior of the system from the actual deployment.
-%
-This approach preserves the same functional behavior of the original system,
-enabling the system to be deployed in different infrastructures opening the door to the \ac{ecc}.
-%
-This foundational work represents the starting point of my research activities,
-which is founded by the Italian PRIN project ``CommonWears'' (2020HCWWLP).
-
-With this thesis,
-I aim to extend the current state of the art by providing a comprehensive framework to support the design and deployment of \ac{cas} in the \ac{ecc},
-leveraging the principles of self-organisation to define the collective and collaborative behavior of the system,
-multi-tier programming models to handle the heterogeneity of the infrastructure producing sound system specifications,
-and AI-driven techniques like reinforcement learning for dynamic resource management,
+Additionally,
+AI techniques,
+including reinforcement learning,
+will enhance dynamic resource management,
 predictive scaling,
-and dynamic system reconfiguration.
+and system reconfiguration,
+nowadays essential aspects in the \ac{ecc}.
+
+Building on foundational work in \emph{aggregate computing}~\cite{DBLP:journals/computer/BealPV15} and pulverization~\cite{DBLP:journals/fi/CasadeiPPVW20,DBLP:journals/iotj/CasadeiFPPSV22},
+this research extends existing paradigms to enable scalable,
+deployment-independent,
+highly reconfigurable,
+adaptable systems by opening these approaches to a wider spectrum of collective heterogeneous applications in the \ac{ecc}.
+%
+The aggregate computing approach offers a high-level abstraction for modeling complex collective system behavior through computational fields~\cite{DBLP:journals/tocl/AudritoVDPB19},
+while pulverization partitions execution models into independent components that preserve functional behavior by achieving flexibility and deployment independence.
+%
+By integrating AI-driven reconfiguration strategies,
+the framework aims to optimize system performance and resource utilization in real time,
+coping with the dynamic nature of the \ac{ecc}.
+
+This research is supported by the Italian PRIN project ``CommonWears'' (2020HCWWLP)\footnote{\url{https://common-wears.github.io/2022/}},
+which aims to develop novel models and architectures for next-generation community-oriented wearable computing systems.
 
 The manuscript is structured as follows:
-TBD.
+\Cref{sec:research-gap} identifies the research gap,
+\Cref{sec:background} provides background information,
+\Cref{sec:research-activities} outlines research activities and outcomes achieved so far,
+\Cref{sec:publications} discusses academic contributions.
+%
+\Cref{sec:future-directions} concludes with future research directions and long-term goals.
+
+% This manuscript presents the research activities carried out during the first year of my PhD,
+% and outlines the future research directions of my research.
+
+% The main goal of my PhD is to develop and investigate innovative engineering approaches to develop and deploy \ac{cas}~\cite{DBLP:conf/birthday/BucchiaroneM19} in emergent and dynamic environments,
+% like the \ac{ecc}~\cite{DBLP:journals/access/MoreschiniPLNHT22}.
+% %
+% With this research line,
+% I aim to provide a general but effective framework supporting the entire workflow of \ac{cas},
+% from the design models,
+% to the deployment and runtime management of the system,
+% up to the system's reconfiguration and adaptation to changing conditions.
+
+% Smart cities,
+% \ac{iot} applications,
+% swarm robotics,
+% exhibit the common trait of being composed of many interconnected devices,
+% each with its own capabilities and constraints,
+% and that must \emph{cooperatively} interact,
+% while adapting coherently as a whole to dynamic environments.
+% %
+% The new opportunities offered by the \ac{ecc} infrastructures paved the way for the development of new applications and services,
+% but they shift the focus from the traditional two tier vision to a more complex,
+% multitier~\cite{DBLP:journals/csur/WeisenburgerWS20} heterogeneous environment.
+
+% The \emph{aggregate computing} approach~\cite{DBLP:journals/computer/BealPV15} to \ac{cas} engineering,
+% comprises a \emph{macro-programming} model and language~\cite{DBLP:journals/csur/Casadei23} based on computational fields~\cite{DBLP:journals/tocl/AudritoVDPB19},
+% where the system's behavior is described in terms of functional composition of these fields.
+% %
+% This paradigm provides a high-level of abstraction to engineer \ac{cas},
+% and has been successfully applied to a wide range of applications,
+% from smart cities to swarm robotics,
+% assuming homogeneous fully peer-to-peer networks.
+% %
+% Pulverization~\cite{DBLP:journals/fi/CasadeiPPVW20} defines a partitioning model for neatly separate the self-organising behavior of the system from the actual deployment.
+% %
+% This approach preserves the same functional behavior of the original system,
+% enabling the system to be deployed in different infrastructures opening the door to the \ac{ecc}.
+% %
+% This foundational work represents the starting point of my research activities,
+% founded by the Italian PRIN project ``CommonWears'' (2020HCWWLP).
+
+% With this thesis,
+% I aim to extend the current state of the art by providing a comprehensive framework to support the design and deployment of \ac{cas} in the \ac{ecc} with focus on communities of wearables,
+% leveraging the principles of self-organisation to define the collective and collaborative behavior of the system,
+% multi-tier programming models to handle the heterogeneity of the infrastructure producing sound system specifications,
+% and AI-driven techniques like reinforcement learning for dynamic resource management,
+% predictive scaling,
+% and dynamic system reconfiguration.
+
+% The manuscript is structured as follows:
+% TBD.
 
 \subsection{Research Gap}
 \label{sec:research-gap}
+
+In the context of the \ac{ecc},
+various approaches have been proposed to overcome the limitations of traditional cloud systems.
+%
+However,
+most of these solutions adopt a bottom-up perspective,
+focusing on specific use cases or isolated aspects such as latency,
+energy efficiency,
+or system performance.
+%
+Consequently,
+they often lack the flexibility and scalability required for broader applicability across diverse environments,
+such as smart cities,
+wearable ecosystems,
+and swarm robotics.
+%
+For example,
+a latency-optimized solution for smart city infrastructure may struggle to adapt when applied to a dynamic swarm of autonomous drones.
+
+Another key challenge lies in modeling the collective and collaborative behavior of interconnected devices within the \ac{ecc}.
+%
+Current methodologies often fail to capture emergent behaviors that arise when devices interact as a system.
+%
+This limitation calls for engineering models capable of describing system behavior in terms of both individual device actions and collective outcomes,
+ensuring coherence and adaptability across different operational contexts.
+
+Additionally,
+the dynamic nature of the ECC requires mechanisms for real-time resource management and system reconfiguration to maintain performance and efficiency under changing conditions.
+%
+Existing solutions,
+often based on static rules or manual configurations, struggle to scale as system complexity increases.
+%
+\ac{rl} and other AI-driven techniques offer promising solutions by enabling systems to learn optimal reconfiguration strategies through experience.
+%
+However,
+current applications of RL are typically tailored to specific scenarios,
+limiting their generalizability and scalability across diverse system architectures.
+
+This research aims to address these gaps by developing a comprehensive framework that integrates collective behavior modeling,
+multitier programming models,
+and AI-driven reconfiguration techniques.
+%
+By ensuring deployment independence,
+scalability,
+and adaptability,
+the framework will provide a unified approach to engineering next-generation \ac{cas} within the \ac{ecc}.
 
 \section{Background}
 \label{sec:background}
 
 \section{Research Activities and Outcomes}
+\label{sec:research-activities}
 
 The first year of my PhD has been focused on the extension and development of approaches to foster \emph{deployment independence} of Collective Adaptive Systems (CAS)~\cite{DBLP:conf/birthday/BucchiaroneM19} in emergent and dynamic environments like the Edge-cloud Continuum~\cite{DBLP:journals/access/MoreschiniPLNHT22}.
 %
@@ -274,6 +378,7 @@ and they have been beneficial to my research growth and knowledge.
 % and they have been beneficial to my research growth and knowledge.
 
 \subsection{Publications}
+\label{sec:publications}
 
 As a result of my research activities,
 I've published and submitted the following papers:
@@ -358,6 +463,7 @@ I've obtained \textbf{15} CFU with evaluation, and \textbf{4} CFU without evalua
 % and improve my writing and presentation skills.
 
 \section{Future Directions}
+\label{sec:future-directions}
 
 I plan to continue my research on developing innovative models for engineering collective adaptive systems.
 %
