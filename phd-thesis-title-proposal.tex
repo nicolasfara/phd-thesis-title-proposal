@@ -460,7 +460,7 @@ each representing a specific functionality of the system.
 We further distinguish between \emph{local} components,
 namely components not requiring interaction since they are merely transformation from input to output,
 and \emph{collective} components,
-which require interaction with other components instances belonging to neighbor devices to achieve the desired behavior.
+which require interaction with other components instances belonging to neighbor devices to achieve the desired (collective) behavior.
 %
 This model can be seen as an orthogonal extension of the pulverization model,
 achieving more flexibility and fine-grained partitioning.
@@ -474,6 +474,40 @@ and properties such as self-stabilisation preservation and deployment independen
 This work has been accepted and published at the \emph{Autonomic Computing and Self-Organizing Systems} conference~\cite{DBLP:conf/acsos/FarabegoliVC24}.
 
 \subsubsection{AI-enhanced Pulverised Systems}
+
+In the context of the \ac{ecc},
+the dynamic nature of the infrastructure requires mechanisms for real-time resource management and system reconfiguration to maintain performance and efficiency under changing conditions.
+%
+To address this challenge,
+I have explored the integration of AI-driven techniques,
+such as reinforcement learning,
+to enhance the dynamic reconfiguration of pulverised systems.
+%
+In this vision,
+the system's reconfiguration is driven by an AI agent that learns optimal reconfiguration strategies through experience,
+ensuring that the system adapts to changing conditions in real-time.
+%
+This research direction aims to optimize system performance and resource utilization,
+while preserving the functional correctness of the system.
+
+A preliminary study has been conducted investigating the combination of \ac{gnn} and \ac{rl} to support the relocation of pulverised systems.
+%
+In this study,
+we formalised a general approach to support the dynamic component's relocation based on properties of the system and the infrastructure,
+such as, but not limited to,
+latency,
+bandwidth,
+and computational load.
+%
+This contribution has been accepted and presented at the \emph{Workshop ``From Objects to Agents'' 2024}~\cite{DBLP:conf/woa/DominiFAV24},
+and at the PhD Symposium of the \emph{IEEE International Conference on Autonomic Computing and Self-Organizing Systems}~\cite{DBLP:conf/acsos/Farabegoli24}.
+
+More consistent results are exercised in a subsequent work,
+where a concrete toolchain has been proposed showing good benefits in terms of power consumption and performance.
+%
+This work has been submitted,
+and it is currently under review to the \emph{ACM Transactions on Autonomous and Adaptive Systems}.
+
 % Additionally,
 % I developed a semi-formalisation of a novel approach to support the relocation of pulverisation components based on \ac{rl} and \ac{gnn}.
 % %
