@@ -12,6 +12,7 @@
 \usepackage{graphicx}
 \usepackage{acronym}
 \usepackage[backend=biber,style=lncs]{biblatex}
+\usepackage[inline]{enumitem}
 \usepackage{cleveref}
 % Used for displaying a sample figure. If possible, figure files should
 % be included in EPS format.
@@ -315,11 +316,67 @@ and maintain performance under variable workloads.
 This is particularly relevant in the context of the \ac{ecc},
 where adaptive resource allocation and dynamic task migration are essential for balancing latency and computational demands.
 
-\subsection{Aggregate Computing}
+\subsection{Aggregate Computing and Pulverization}
 \label{sec:aggregate-computing}
 
-\subsection{Pulverization}
-\label{sec:pulverization}
+\Ac{cas},
+such as \ac{iot} ecosystems and swarm robotics,
+require efficient programming and deployment models to optimize both functional and non-functional goals.
+%
+Aggregate computing~\cite{DBLP:journals/computer/BealPV15} is a macro-programming model~\cite{DBLP:journals/csur/Casadei23} designed to enable the coordinated behaviour of large sets of devices,
+each capable of \emph{sensing},
+\emph{computing},
+and \emph{interacting} with its neighbours.
+
+Aggregate computing operates in discrete,
+asynchronous rounds,
+following a three-step process:
+
+\begin{itemize}
+    \item \textbf{Sense}: A device collects data from its local environment and receives messages from neighbouring devices.
+    \item \textbf{Compute}: It processes this information using a shared aggregate program to determine both its output value and the data to be shared with neighbours.
+    \item \textbf{Interact}: The device performs its actuations and communicates the computed data to neighbours.
+\end{itemize}
+
+This model facilitates scalable and self-organizing behavior across distributed systems.
+%
+However,
+deploying such systems efficiently,
+especially across heterogeneous devices and infrastructures,
+presents significant challenges.
+
+In this context,
+\emph{pulverization} has been proposed as a deployment model to enhance aggregate computing by breaking down the computational process into five distinct components:
+\begin{enumerate*}[label=(\roman*)]
+    \item \emph{sensors}: collect data from the environment;
+    \item \emph{actuators}: execute physical actions based on computed results;
+    \item \emph{state}: manage the internal state of a device;
+    \item \emph{communication}: handle message exchange with neighbouring devices; and
+    \item \emph{behavior}: execute the aggregate program to process input data and generate outputs.
+\end{enumerate*}
+
+Each component can be deployed independently,
+either on the same device or across different infrastructure nodes (e.g., edge, fog, or cloud servers).
+%
+This flexibility enables tailored deployments that balance energy efficiency,
+latency,
+and computational load.
+
+For instance,
+in a swarm robotics scenario,
+robots with limited computational power can offload intensive processing tasks to more capable robots or cloud servers.
+%
+Meanwhile,
+sensing and actuation components typically remain on the robots themselves.
+
+Different deployment configurations,
+such as fully peer-to-peer or fully cloud-based,
+exhibit trade-offs in terms of latency, bandwidth consumption,
+and energy usage.
+%
+Hybrid deployments,
+where components are distributed across multiple devices,
+offer opportunities to optimize these trade-offs.
 
 \subsection{Multitier}
 \label{sec:multitier}
