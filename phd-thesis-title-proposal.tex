@@ -378,145 +378,125 @@ Hybrid deployments,
 where components are distributed across multiple devices,
 offer opportunities to optimize these trade-offs.
 
-\subsection{Multitier}
-\label{sec:multitier}
-
 \section{Research Activities and Outcomes}
 \label{sec:research-activities}
 
-The first year of my PhD has been focused on the extension and development of approaches to foster \emph{deployment independence} of Collective Adaptive Systems (CAS)~\cite{DBLP:conf/birthday/BucchiaroneM19} in emergent and dynamic environments like the Edge-cloud Continuum~\cite{DBLP:journals/access/MoreschiniPLNHT22}.
+My research activities started with a focus on the extension and development of approaches to foster \emph{deployment independence} of \ac{cas} in emergent and dynamic environments like the \ac{ecc},
+and to support the system's reconfiguration at runtime.
 %
-During this research activities,
-I was able to publish and submit two relevant papers in high-quality journals,
-and published and presented many papers in conferences and workshops.
+In particular,
+I've investigated dynamic reconfiguration aspects,
+developing novel approaches and practical frameworks to support the relocation of pulverised components at runtime,
+both from a pure local perspective (i.e., local reconfiguration rules) and from a global perspective (i.e., collective reconfiguration rules).
 %
-Moreover,
-I've been involved in tutoring activities and attended several PhD courses and school to improve my research skills and knowledge.
-
-\subsection{PhD Scope}
+Relevant outcomes have been achieved in context where non-functional properties like cost,
+power consumption,
+and performance are optimized,
+and the system's functional behavior is preserved.
+%
+This research has led to the publication and submission of several papers in high-quality journals and conferences,
+as well as the development of new collaborations and research directions.
 
 \subsection{Scientific Contributions and Activities}
+\label{sec:scientific-contributions}
 
-My first year started with a natural progression of my Master's thesis,
-where I developed a practical framework to implement the pulverisation model~\cite{DBLP:journals/fi/CasadeiPPVW20,DBLP:journals/iotj/CasadeiFPPSV22}--
-a modern approach to partition the execution model of CAS into independent components--
-and extended it to support dynamic components' relocation over the infrastructure at runtime.
+\subsubsection{Dynamic Deployment and Local Reconfiguration Policies}
+At the beginning of my research,
+I focused on developing innovative models to enhance the deployment independence of \ac{cas}.
 %
-The proposed framework has been validated through a set of experiments,
-showing the feasibility of the approach and the benefits in terms of deployment independence and non-functional properties,
+Building upon previous work on pulverisation~\cite{DBLP:journals/fi/CasadeiPPVW20,DBLP:journals/iotj/CasadeiFPPSV22}---a modern approach to partition the execution model of CAS into independent components---I proposed a practical framework that implements and extends the pulverisation model to support dynamic components' relocation over the infrastructure at runtime.
+
+To validate the proposed framework and the extended model with reconfiguration rules,
+I conducted a series of experiments.
+%
+These experiments demonstrated the feasibility of the approach and highlighted its benefits in terms of deployment independence and non-functional properties,
 such as cost,
 power consumption,
 and performance.
+%
+The results of this research have been published in a paper submitted to the \emph{Future Generation Computer Systems} journal~\cite{DBLP:journals/fgcs/FarabegoliPCV24}.
 
-Subsequently,
-I investigate new reconfiguration approaches shifting from local reconfiguration rules to a global perspective,
-where the system's reconfiguration is expressed by a collective program,
-leveraging \emph{Aggregate Computing}.
+\subsubsection{Global Reconfiguration Policies and Load Balancing}
+The limits exhibited by predefined reconfiguration rules in supporting the dynamic nature of \ac{cas} led me to explore a novel approach to better support the dynamic reconfiguration of \ac{cas} based on the pulverisation model.
+%
+Predefined reconfiguration rules may not be sufficient to cover all possible scenarios and may lead to suboptimal solutions,
+such as oscillatory behaviors.
+%
+To address this issue,
+I shifted the perspective from local reconfiguration rules to a global approach,
+where the system's reconfiguration is expressed by a collective program leveraging \emph{Aggregate Computing}.
 %
 In this contribution,
-I proposed a general pulverisation framework architecture where dynamic components' reconfiguration is captured as a first-class citizen,
-and I proposed a novel (collective) algorithm to balance the system's load during the reconfiguration process.
+I proposed a general pulverisation framework architecture where dynamic components' reconfiguration is treated as a first-class citizen and introduced a novel (collective) algorithm to balance the system's load during the reconfiguration process.
+
+The proposed approach has been validated through a series of experiments,
+demonstrating that the algorithm can better adapt to disruptive and changing conditions,
+providing improved performance and stability compared to predefined allocations.
 %
-The proposed approach has been validated through a set of experiments,
-showing that the proposed algorithm can better adapt to disruptive and changing conditions,
-and it can provide better performance and stability compared to allocations defined a priori.
+The results of this research have been published to the \emph{Internet of Things; Engineering Cyber Physical Human Systems} journal~\cite{DBLP:journals/iot/FarabegoliPCV24}.
 
-Then,
-a semi-formalisation of a novel approach to support the pulverisation component's relocation based on \ac{rl} and \ac{gnn} has been developed.
+\subsubsection{Extended Pulverized Model}
+The pulverization model,
+as presented in~\cite{DBLP:journals/fi/CasadeiPPVW20},
+limits its partitioning system into only five components.
 %
-This vision aims to pave the way for the development of intelligent CAS in modern infrastructures,
-where the system's reconfiguration is driven by AI-based techniques.
-
-An orthogonal contribution w.r.t. the pulverisation model has been developed to partition the program specification of CAS into independent functions (or services).
+This coarse grained partitioning may not be desired or suitable for all applications,
+especially when heterogeneous devices are involved.
 %
-This approach aims to provide a more flexible and fine-grained approach to partition the system's program specification,
-and it has been validated through a set of experiments,
-showing both empirically and formally that the proposed approach preserves the same functional behavior of the original (monolithic deployed) system,
-and it can provide non-functional benefits in terms of power consumption and performance.
+For example,
+robots or drones equipped with only microcontrollers may not sustain the entire \emph{behavior},
+but only a slice of it.
 
-Finally,
-I've been involved in other works and collaborations with other PhD students and researchers
-in the development and evaluation of coordination algorithms for UAVs,
-and in the development of a novel federated learning approach.
+Starting from this intuition,
+we can identify in the macro-program functionalities requiring specific capabilities that may not be available on all devices.
 %
-All these activities can be framed in my research direction opening new research perspectives and collaborations,
-and they have been beneficial to my research growth and knowledge.
+To address this issue,
+I proposed an orthogonal partitioning model allowing the system's specification to be defined in terms of ``wired'' independently deployable components (or functions).
+%
+In this model,
+the macroprogram is specified as a direct-acyclic graph of interconnected components,
+each representing a specific functionality of the system.
+%
+We further distinguish between \emph{local} components,
+namely components not requiring interaction since they are merely transformation from input to output,
+and \emph{collective} components,
+which require interaction with other components instances belonging to neighbor devices to achieve the desired behavior.
+%
+This model can be seen as an orthogonal extension of the pulverization model,
+achieving more flexibility and fine-grained partitioning.
 
+Such a new model has been tested to proof its correctness in terms of functional correctness,
+and its non-functional benefits in terms of power consumption in a wearable scenario.
+Moreover,
+a formalisation of the model has been provided through operational semantics,
+and properties such as self-stabilisation preservation and deployment independence have been formally proven.
+%
+This work has been accepted and published at the \emph{Autonomic Computing and Self-Organizing Systems} conference~\cite{DBLP:conf/acsos/FarabegoliVC24}.
 
-% During the first year of my PhD,
-% I focused on developing innovative models to enhance the deployment independence of collective adaptive systems (CAS).
+\subsubsection{AI-enhanced Pulverised Systems}
+% Additionally,
+% I developed a semi-formalisation of a novel approach to support the relocation of pulverisation components based on \ac{rl} and \ac{gnn}.
 % %
-% Building upon previous work on pulverisation~\cite{DBLP:journals/iotj/CasadeiFPPSV22,DBLP:journals/fi/CasadeiPPVW20}--a modern approach to partitioning the execution model of CAS into independent components--
-% I proposed a practical framework that implements and extends the pulverisation model to support dynamic components' relocation over the infrastructure at runtime.
+% This vision aims to pave the way for intelligent \ac{cas} in modern infrastructures,
+% where system reconfiguration is driven by AI-based techniques.
 
-% To validate the proposed framework and the extended model with reconfiguration rules,
-% I conducted a series of experiments.
+% An orthogonal contribution to the pulverisation model focused on partitioning the program specification of CAS into independent functions (or services) to achieve flexible deployment within the \emph{Edge-cloud Continuum}.
 % %
-% These experiments demonstrated the feasibility of the approach and highlighted its benefits in terms of deployment independence and non-functional properties,
-% such as cost,
-% power consumption,
-% and performance.
+% This approach aims to provide a more flexible and fine-grained system partitioning.
 % %
-% The results of this research have been published in a paper submitted to the \emph{Future Generation Computer Systems} journal~\cite{DBLP:journals/fgcs/FarabegoliPCV24}.
+% The proposed model has been formalised via operational semantics,
+% with properties such as self-stabilisation preservation and deployment independence formally proven.
+% %
+% Experiments have shown that the approach preserves the functional behavior of the original monolithic system while offering non-functional benefits in terms of power consumption and performance, 
+% with minimal communication overhead.
+% %
+% The results have been accepted and presented at the \emph{ACSOS 2024} conference~\cite{DBLP:conf/acsos/FarabegoliFAVE24}.
 
-% During the first year of my PhD,
-% I have been working on the development of innovative models fostering the deployment independence of collective adaptive systems (CAS).
-
-% In particular,
-% based on previous work on the pulverisation~\cite{DBLP:journals/iotj/CasadeiFPPSV22,DBLP:journals/fi/CasadeiPPVW20} --
-% a modern approach to partition into independent components the execution model of CAS --
-% I proposed a practical framework implementing the pulverisation model,
-% and extending it to support the dynamic reconfiguration at runtime.
+% Beyond my main research activities,
+% I have collaborated with fellow PhD students and researchers on developing and evaluating coordination algorithms for UAVs and a novel federated learning approach.
 % %
-% The proposed framework and the extended model with reconfiguration rules have been validated through a set of experiments,
-% showing the feasibility of the approach and the benefits in terms of deployment independence and non-functional properties,
-% like cost, power consumption, and performance.
-% %
-% The results of the experiments have been published in a paper submitted to the journal \emph{Future Generation Computer Systems journal}~\cite{DBLP:journals/fgcs/FarabegoliPCV24}.
-
-% Subsequently,
-% I have been working on the development of a novel approach to better support the dynamic reconfiguration of CAS based on the pulverisation model:
-% pre-defined reconfiguration rules may not be sufficient to cover all possible scenarios,
-% and they may lead to suboptimal solutions,
-% like oscillator behaviors.
-% %
-% To address this issue,
-% I proposed to shift the perspective from local reconfiguration rules to a global perspective,
-% where the system's reconfiguration is expressed by a collective program,
-% leveraging \emph{Aggregate Computing}.
-% %
-% In this contribution,
-% I proposed a general pulverisation framework architecture where dynamic components' reconfiguration is captured as a first-class citizen,
-% and I proposed a novel (collective) algorithm to balance the system's load during the reconfiguration process.
-% %
-% The proposed approach has been validated through a set of experiments,
-% showing that the proposed algorithm can better adapt to disruptive and changing conditions,
-% and it can provide better performance and stability compared to allocations defined a priori.
-% %
-% The results of the experiments and the proposed approach have been submitted and currently under review to the journal \emph{Internet of Things; Engineering Cyber Physical Human Systems}~\cite{farabegoli4798700dynamic}.
-
-% Finally,
-% I worked on the development of a novel approach to partition the program specification of CAS into independent functions (or services) to achieve flexible deployment in the \emph{Edge-cloud Continuum}.
-% %
-% This contribution is orthogonal to the pulverisation model,
-% and it aims to provide a more flexible and fine-grained approach to partition the system's program specification.
-% %
-% The proposed model has been formalised via an operational semantics,
-% and properties like self-stabilisation preservation, and deployment independence have been formally proved.
-% %
-% The new model has been validated through a set of experiments,
-% showing empirically that the proposed approach preserves the same functional behavior of the original (monolithic deployed) system,
-% and it can provide non-functional benefits in terms of power consumption and performance by paying a small overhead in terms of communication.
-% %
-% The results of the experiments and the proposed approach have been accepted and presented at the \emph{ACSOS 2024} conference~\cite{DBLP:conf/acsos/FarabegoliFAVE24}.
-
-% Aside from my main research activities,
-% I've been involved in other works and collaborations with other PhD students and researchers,
-% in the development and evaluation of coordination algorithms for UAVs,
-% and in the development of a novel federated learning approach.
-% %
-% All these activities can be framed in my research direction opening new research perspectives and collaborations,
-% and they have been beneficial to my research growth and knowledge.
+% These collaborative efforts have contributed to my research growth,
+% expanding my knowledge and opening new research perspectives.
 
 \subsection{Publications}
 \label{sec:publications}
