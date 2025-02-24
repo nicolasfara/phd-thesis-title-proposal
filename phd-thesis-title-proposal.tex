@@ -221,13 +221,13 @@ ensuring coherence and adaptability across different operational contexts.
 Additionally,
 the dynamic nature of the ECC requires mechanisms for real-time resource management and system reconfiguration to maintain performance and efficiency under changing conditions.
 %
-Existing solutions,
+Existing solutions~\cite{},
 often based on static rules or manual configurations, struggle to scale as system complexity increases.
 %
 \ac{rl} and other AI-driven techniques offer promising solutions by enabling systems to learn optimal reconfiguration strategies through experience.
 %
 However,
-current applications of RL are typically tailored to specific scenarios,
+current applications of RL are typically tailored to specific scenarios~\cite{},
 limiting their generalizability and scalability across diverse system architectures.
 
 This research aims to address these gaps by developing a comprehensive framework that integrates collective behavior modeling,
@@ -321,13 +321,19 @@ where adaptive resource allocation and dynamic task migration are essential for 
 
 \Ac{cas},
 such as \ac{iot} ecosystems and swarm robotics,
-require efficient programming and deployment models to optimize both functional and non-functional goals.
+require efficient programming and deployment models to optimize both functional and non-functional goals;
+a shift from traditional monolithic,
+device centric approaches to more flexible and scalable paradigms is needed.
 %
+Moreover,
+due to heterogeneity characteristics,
+an expressive and flexible deployment model is required to overcome the limitations of traditional cloud-based solutions.
+
 Aggregate computing~\cite{DBLP:journals/computer/BealPV15} is a macro-programming model~\cite{DBLP:journals/csur/Casadei23} designed to enable the coordinated behaviour of large sets of devices,
 each capable of \emph{sensing},
 \emph{computing},
 and \emph{interacting} with its neighbours.
-
+%
 Aggregate computing operates in discrete,
 asynchronous rounds,
 following a three-step process:
@@ -343,7 +349,12 @@ This model facilitates scalable and self-organizing behavior across distributed 
 However,
 deploying such systems efficiently,
 especially across heterogeneous devices and infrastructures,
-presents significant challenges.
+presents significant challenges:
+not all the devices have the same capabilities,
+making impossible deploying the entire system on each device;
+moreover,
+the infrastructure may change dynamically,
+requiring the system to adapt in real-time.
 
 In this context,
 \emph{pulverization} has been proposed as a deployment model to enhance aggregate computing by breaking down the computational process into five distinct components:
@@ -354,6 +365,14 @@ In this context,
     \item \emph{communication}: handle message exchange with neighbouring devices; and
     \item \emph{behavior}: execute the aggregate program to process input data and generate outputs.
 \end{enumerate*}
+\Cref{fig:pulverization-model} illustrates the pulverization model for aggregate computing presented in~\cite{DBLP:journals/fi/CasadeiPPVW20}.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\textwidth]{figures/image.png}
+    \caption{Pulverization model for aggregate computing~\cite{DBLP:journals/fi/CasadeiPPVW20}.}
+    \label{fig:pulverization-model}
+\end{figure}
 
 Each component can be deployed independently,
 either on the same device or across different infrastructure nodes (e.g., edge, fog, or cloud servers).
@@ -547,7 +566,8 @@ I've published and submitted the following papers:
 
 \subsubsection{Submitted and Under Review}
 \begin{enumerate}
-    \item Submission to the \emph{ACM Transactions on Autonomous and Adaptive Systems}
+    \item Submitted work and currently under review to \emph{ACM Transactions on Autonomous and Adaptive Systems}
+    \item Submitted work to \emph{COORDINATION 2025 -- International Conference on Coordination Models and Languages}
 \end{enumerate}
 
 % \begin{enumerate}
@@ -578,30 +598,30 @@ I've attended the following conferences and workshops:
 
 % \subsection{Literature Review}
 
-\section{Academic Activities}
+% \section{Academic Activities}
 
-\subsection{Tutoring Activities}
+% \subsection{Tutoring Activities}
 
-In this first year of my PhD,
-I have been involved in tutoring activities for the course \textbf{PROGRAMMAZIONE AD OGGETTI [cod. 70219]} for the Bachelor's Degree in Computer Science and Engineering for the academic year 2023/2024,
-and currently involved in the academic year 2024/2025 edition of the same course.
+% In this first year of my PhD,
+% I have been involved in tutoring activities for the course \textbf{PROGRAMMAZIONE AD OGGETTI [cod. 70219]} for the Bachelor's Degree in Computer Science and Engineering for the academic year 2023/2024,
+% and currently involved in the academic year 2024/2025 edition of the same course.
 
-\subsection{Doctoral School and Courses}
+% \subsection{Doctoral School and Courses}
 
-I've attended the \textbf{Bertinoro International Spring School 2024} in March 2024,
-in particular I've attended the \emph{Graph Neural Network} course by Prof. Fabrizio Silvestri,
-the \emph{Program analysis: from proving correctness to proving incorrectness} course by Prof. Roberto Bruni and Robera Gori,
-and the \emph{Large Language Models} course by Prof. Danilo Croce.
-%
-Moreover,
-I've attended the following PhD courses:
-\begin{enumerate}
-    \item \emph{How to Write and Publish a Research Paper in Computer Science and Engineering} by Prof. Zeynep Kiziltan;
-    \item \emph{Risk Assessment of Machine Learning for Cybersecurity} by Prof. Fabio Pierazzi;
-    \item \emph{Introduction to complex systems science} by Prof. Andrea Roli;
-\end{enumerate}
-At the end of the first year,
-I've obtained \textbf{15} CFU with evaluation, and \textbf{4} CFU without evaluation.
+% I've attended the \textbf{Bertinoro International Spring School 2024} in March 2024,
+% in particular I've attended the \emph{Graph Neural Network} course by Prof. Fabrizio Silvestri,
+% the \emph{Program analysis: from proving correctness to proving incorrectness} course by Prof. Roberto Bruni and Robera Gori,
+% and the \emph{Large Language Models} course by Prof. Danilo Croce.
+% %
+% Moreover,
+% I've attended the following PhD courses:
+% \begin{enumerate}
+%     \item \emph{How to Write and Publish a Research Paper in Computer Science and Engineering} by Prof. Zeynep Kiziltan;
+%     \item \emph{Risk Assessment of Machine Learning for Cybersecurity} by Prof. Fabio Pierazzi;
+%     \item \emph{Introduction to complex systems science} by Prof. Andrea Roli;
+% \end{enumerate}
+% At the end of the first year,
+% I've obtained \textbf{15} CFU with evaluation, and \textbf{4} CFU without evaluation.
 
 % \section{Self Evaluation}
 
@@ -617,21 +637,82 @@ I've obtained \textbf{15} CFU with evaluation, and \textbf{4} CFU without evalua
 % get familiar with new research tools and environments,
 % and improve my writing and presentation skills.
 
-\section{Future Directions}
+\section{Research Roadmap}
 \label{sec:future-directions}
-
-I plan to continue my research on developing innovative models for engineering collective adaptive systems.
+As follows,
+a tentative roadmap for the next years of my PhD is presented.
 %
-My focus will be on integrating techniques that support comprehensive
-and effective reconfiguration strategies while exploring multi-tier programming models to facilitate the deployment of CAS in the Edge-Cloud Continuum.
+The roadmap is divided into three main research directions: \emph{Models},
+\emph{Deployment Platforms},
+and \emph{Dynamic Reconfiguration}.
+
+\subsection{Models}
+Even though the pulverisation model has been extended to support more flexible and fine-grained partitioning,
+future research must focus on how this model can be applied not only to aggregate computing,
+but more in general,
+to collective systems.
+%
+This goal requires a deep investigation of the model's properties,
+providing general abstractions that can be reused across different paradigms for implementing collective systems.
+
+\subsection{Deployment Platforms}
+The actual gap between simulation and real deployment of pulverised systems must be addressed.
+%
+A preliminary toolchain has been developed to support the deployment of pulverised systems~\cite{DBLP:journals/fgcs/FarabegoliPCV24,DBLP:conf/acsos/FarabegoliVC24},
+but a more general,
+comprehensive framework is needed to close the gap between simulation and real deployment.
+%
+The focus of this research direction is to provide a
+flexible platform supporting the entire engineering process from its conceptualization,
+its design,
+its simulation in a controlled environment,
+up to its deployment in the real world.
+%
+An intriguing investigation must involve the adoption of multitier programming~\cite{},
+since it has common similarities with macroprogramming~\cite{DBLP:journals/csur/Casadei23} models,
+where distributed systems are defined in a single program,
+but differently from aggregate computing,
+for instance,
+the focus is on the soundness of the communication among the tiers of an infrastructure,
+key aspects when dealing with the \ac{ecc}.
+%
+Even if this platform is supposed to be general,
+I plan to use aggregate computing as a case study to validate the platform.
+
+\subsection{Dynamic Reconfiguration}
+Dynamic relocation and deployments have covered a significant part of my research activities~\cite{DBLP:journals/fgcs/FarabegoliPCV24,DBLP:journals/iot/FarabegoliPCV24}
+%
+However,
+dealing with a high number of devices,
+unpredictable changing conditions such as network latency,
+bandwidth,
+and computational load,
+requires more advanced techniques to support the system's reconfiguration.
+%
+A preliminary study has been conducted and presented in~\cite{DBLP:conf/woa/DominiFAV24},
+but a more deep investigation is needed to provide a comprehensive framework to support the dynamic reconfiguration of pulverised systems,
+as presented in the previous sections.
 %
 In this context,
-I aim to investigate the use of capability-based mechanisms for controlling system deployment and runtime reconfiguration,
-ensuring that system specifications are correct by construction leveraging advanced type systems.
+I will investigate how to devise a general AI-based reconfiguration model supporting dynamic deployments,
+that integrates with the high-level programming models proposed as a future research direction.
 %
-Additionally,
-I am interested in integrating AI-based techniques to support runtime reconfiguration while preserving the functional correctness of the system,
-ensured at the design time by the type system.
+In particular,
+I aim to investigate how capabilities can permeate from the design to the reconfiguration,
+ensuring safety and correctness of the system at runtime.
+
+% I plan to continue my research on developing innovative models for engineering collective adaptive systems.
+% %
+% My focus will be on integrating techniques that support comprehensive
+% and effective reconfiguration strategies while exploring multitier programming~\cite{DBLP:journals/csur/WeisenburgerWS20} models to facilitate the deployment of collective systems in the \ac{ecc}.
+% %
+% In this context,
+% I aim to investigate the use of capability-based mechanisms for controlling system deployment and runtime reconfiguration,
+% ensuring that system specifications are correct by construction leveraging advanced type systems.
+% %
+% Additionally,
+% I am interested in integrating AI-based techniques to support runtime reconfiguration while preserving the functional correctness of the system,
+% ensured at the design time by the type system.
 
 
 %
