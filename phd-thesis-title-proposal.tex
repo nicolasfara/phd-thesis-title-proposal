@@ -566,8 +566,8 @@ I've published and submitted the following papers:
 
 \subsubsection{Submitted and Under Review}
 \begin{enumerate}
-    \item Submitted work and currently under review to \emph{ACM Transactions on Autonomous and Adaptive Systems}
-    \item Submitted work to \emph{COORDINATION 2025 -- International Conference on Coordination Models and Languages}
+    \item \fullcite{taas-heterognn} --- Submitted work and currently under review to \emph{ACM Transactions on Autonomous and Adaptive Systems} 
+    \item \fullcite{coordination-prolog} --- Submitted work to \emph{COORDINATION 2025 -- International Conference on Coordination Models and Languages}
 \end{enumerate}
 
 % \begin{enumerate}
@@ -678,6 +678,18 @@ key aspects when dealing with the \ac{ecc}.
 %
 Even if this platform is supposed to be general,
 I plan to use aggregate computing as a case study to validate the platform.
+
+\subsection{Cross-language Support}
+Device heterogeneity force the adoption of diverse technological stacks,
+and consequently,
+different SDK and programming language.
+%
+Base on works like~\cite{DBLP:journals/jss/BertolottiCOC24},
+which do not directly apply the approach to distributed systems,
+I will investigare a ``common'' core of the platform that can be ``reified'' into different platforms,
+enabling a seamless interoperability among different devices and programming languages.
+%
+This direction will be a pillar for managing the heterogeneity of the \ac{ecc}.
 
 \subsection{Dynamic Reconfiguration}
 Dynamic relocation and deployments have covered a significant part of my research activities~\cite{DBLP:journals/fgcs/FarabegoliPCV24,DBLP:journals/iot/FarabegoliPCV24}
