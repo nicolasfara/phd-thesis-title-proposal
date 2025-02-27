@@ -11,7 +11,7 @@
 %
 \usepackage{graphicx}
 \usepackage{acronym}
-\usepackage[backend=biber,style=lncs]{biblatex}
+\usepackage[backend=biber,style=lncs,maxnames=99]{biblatex}
 \usepackage[inline]{enumitem}
 \usepackage{cleveref}
 % Used for displaying a sample figure. If possible, figure files should
@@ -90,7 +90,7 @@ and swarm robotics has introduced new challenges in system design and management
 %
 These systems,
 characterized by numerous devices with varying capabilities and constraints,
-must interact cooperatively and adaptively in dynamic environments.
+must interact cooperatively and adapt in dynamic environments.
 %
 Traditional cloud-based solutions,
 limited by latency and bandwidth constraints,
@@ -102,7 +102,7 @@ This research aims to develop innovative approaches for engineering \ac{cas}~\ci
 The proposed framework will support the entire \ac{cas} workflow,
 from design and deployment to runtime management and adaptation.
 %
-By leveraging self-organization principles,
+By leveraging self-* principles~\cite{DBLP:conf/bertinoro/BabaogluJMFLM05},
 the framework will ensure coherent collective behavior,
 while multitier~\cite{DBLP:journals/csur/WeisenburgerWS20} programming models will address the heterogeneity and layered characteristics of modern infrastructures.
 %
@@ -116,7 +116,7 @@ nowadays essential aspects in the \ac{ecc}.
 
 Building on foundational work in \emph{aggregate computing}~\cite{DBLP:journals/computer/BealPV15} and pulverization~\cite{DBLP:journals/fi/CasadeiPPVW20,DBLP:journals/iotj/CasadeiFPPSV22},
 this research extends existing paradigms to enable scalable,
-deployment-independent,
+deployment independent,
 highly reconfigurable,
 adaptable systems by opening these approaches to a wider spectrum of collective heterogeneous applications in the \ac{ecc}.
 %
@@ -189,55 +189,6 @@ The manuscript is structured as follows:
 
 % The manuscript is structured as follows:
 % TBD.
-
-\subsection{Research Gap}
-\label{sec:research-gap}
-
-In the context of the \ac{ecc},
-various approaches have been proposed to overcome the limitations of traditional cloud systems.
-%
-However,
-most of these solutions adopt a bottom-up perspective,
-focusing on specific use cases or isolated aspects such as latency,
-energy efficiency,
-or system performance.
-%
-Consequently,
-they often lack the flexibility and scalability required for broader applicability across diverse environments,
-such as smart cities,
-wearable ecosystems,
-and swarm robotics.
-%
-For example,
-a latency-optimized solution for smart city infrastructure may struggle to adapt when applied to a dynamic swarm of autonomous drones.
-
-Another key challenge lies in modeling the collective and collaborative behavior of interconnected devices within the \ac{ecc}.
-%
-Current methodologies often fail to capture emergent behaviors that arise when devices interact as a system.
-%
-This limitation calls for engineering models capable of describing system behavior in terms of both individual device actions and collective outcomes,
-ensuring coherence and adaptability across different operational contexts.
-
-Additionally,
-the dynamic nature of the ECC requires mechanisms for real-time resource management and system reconfiguration to maintain performance and efficiency under changing conditions.
-%
-Existing solutions~\cite{DBLP:conf/isola/CabriCCNPTZ14},
-often based on static rules or manual configurations, struggle to scale as system complexity increases.
-%
-\ac{rl} and other AI-driven techniques offer promising solutions by enabling systems to learn optimal reconfiguration strategies through experience.
-%
-However,
-current applications of RL are typically tailored to specific scenarios~\cite{DBLP:journals/tpds/JayanettiHB24},
-limiting their generalizability and scalability across diverse system architectures.
-
-This research aims to address these gaps by developing a comprehensive framework that integrates collective behavior modeling,
-multitier programming models,
-and AI-driven reconfiguration techniques.
-%
-By ensuring deployment independence,
-scalability,
-and adaptability,
-the framework will provide a unified approach to engineering next-generation \ac{cas} within the \ac{ecc}.
 
 \section{Background}
 \label{sec:background}
@@ -397,6 +348,103 @@ Hybrid deployments,
 where components are distributed across multiple devices,
 offer opportunities to optimize these trade-offs.
 
+\section{Research Gap}
+\label{sec:research-gap}
+
+In the context of the \ac{ecc},
+various approaches have been proposed to overcome the limitations of traditional cloud systems,
+like reduced latency exploiting edge computing,
+data processing before sending it to the cloud.
+%
+However,
+most of these solutions adopt a bottom-up perspective,
+focusing on specific use cases or isolated aspects such as latency,
+energy efficiency,
+or system performance.
+%
+Consequently,
+they often lack the flexibility and scalability required for broader applicability across diverse environments,
+such as smart cities,
+wearable ecosystems,
+and swarm robotics.
+
+Another key challenge lies in modeling the collective and collaborative behavior of interconnected devices within the \ac{ecc}.
+%
+Current methodologies often fail to capture emergent behaviors that arise when devices interact as a system.
+%
+This limitation calls for engineering models capable of describing system behavior in terms of both individual device actions and collective outcomes,
+ensuring coherence and adaptability across different operational contexts.
+
+Additionally,
+the dynamic nature of the ECC requires mechanisms for real-time resource management and system reconfiguration to maintain performance and efficiency under changing conditions.
+%
+Existing solutions~\cite{DBLP:conf/isola/CabriCCNPTZ14},
+often based on static rules or manual configurations, struggle to scale as system complexity increases.
+%
+\ac{rl} and other AI-driven techniques offer promising solutions by enabling systems to learn optimal reconfiguration strategies through experience.
+%
+However,
+current applications of RL are typically tailored to specific scenarios~\cite{DBLP:journals/tpds/JayanettiHB24},
+limiting their generalizability and scalability across diverse system architectures.
+
+This research aims to address these gaps by developing a comprehensive framework that integrates collective behavior modeling,
+multitier programming models,
+and AI-driven reconfiguration techniques.
+%
+By ensuring deployment independence,
+scalability,
+and adaptability,
+the framework will provide a unified approach to engineering next-generation \ac{cas} within the \ac{ecc}.
+
+\section{Overall Methodology}
+\label{sec:methodology}
+
+This research adopts a multi-faceted approach to engineering \ac{cas} within the \ac{ecc}.
+%
+The methodology integrates theoretical model development,
+simulation-based validation,
+and real-world deployment strategies to address key challenges such as heterogeneity, scalability, and dynamic reconfiguration.
+
+The research framework consists of the following phases:
+\paragraph{Cross-language Model}
+    One approach to face platforms heterogeneity it to provide a partitioning framework leveraging a DSL or dedicated language,
+    which supports, e.g., via transpiration,
+    the targeting of different execution platforms,
+    preserving the same functional semantics and interoperability.
+
+\paragraph{\ac{ecc} and Infrastructure Heterogeneity}
+    Different device capabilities and infrastructures may require different deployment strategies.
+    %
+    At the platform level,
+    multitier programming models will be employed to handle the heterogeneity of the infrastructure,
+    providing an effective way of specifying the communication patterns along the infrastructure continuum,
+    preserving communication soundness.
+    %
+    Combined with pulverised deployments,
+    this approach will abstract the actual deployment providing reusable systems specifications in different contexts.
+\paragraph{Dynamic Reconfiguration and Deployment}
+    The dynamic nature of the \ac{ecc} requires mechanisms for real-time resource management and system reconfiguration to maintain performance and efficiency under changing conditions.
+    %
+    AI techniques,
+    including reinforcement learning,
+    will enhance dynamic resource management,
+    predictive scaling,
+    and system reconfiguration,
+    completing the framework.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{figures/methodology-overview.pdf}
+    \caption{Research methodology for engineering \ac{cas} in the \ac{ecc}.}
+    \label{fig:methodology}
+\end{figure}
+
+The methodology will be validated through simulation-based experiments and real-world deployments,
+demonstrating the framework's effectiveness in supporting the design and deployment of \ac{cas} within the \ac{ecc}.
+%
+In \Cref{fig:methodology},
+the overall research methodology is illustrated.
+
 \section{Research Activities and Outcomes}
 \label{sec:research-activities}
 
@@ -433,7 +481,7 @@ such as cost,
 power consumption,
 and performance.
 %
-The results of this research have been published in a paper submitted to the \emph{Future Generation Computer Systems} journal~\cite{DBLP:journals/fgcs/FarabegoliPCV24}.
+The results of this research have been published in \emph{Future Generation Computer Systems}~\cite{DBLP:journals/fgcs/FarabegoliPCV24}.
 
 \subsubsection{Global Reconfiguration Policies and Load Balancing}
 The limits exhibited by predefined reconfiguration rules in supporting the dynamic nature of \ac{cas} led me to explore a novel approach to better support the dynamic reconfiguration of \ac{cas} based on the pulverisation model.
@@ -452,7 +500,7 @@ The proposed approach has been validated through a series of experiments,
 demonstrating that the algorithm can better adapt to disruptive and changing conditions,
 providing improved performance and stability compared to predefined allocations.
 %
-The results of this research have been published to the \emph{Internet of Things; Engineering Cyber Physical Human Systems} journal~\cite{DBLP:journals/iot/FarabegoliPCV24}.
+The results of this research have been published to \emph{Internet of Things; Engineering Cyber Physical Human Systems}~\cite{DBLP:journals/iot/FarabegoliPCV24}.
 
 \subsubsection{Extended Pulverized Model}
 The pulverization model,
@@ -490,7 +538,7 @@ Moreover,
 a formalisation of the model has been provided through operational semantics,
 and properties such as self-stabilisation preservation and deployment independence have been formally proven.
 %
-This work has been accepted and published at the \emph{Autonomic Computing and Self-Organizing Systems} conference~\cite{DBLP:conf/acsos/FarabegoliVC24}.
+This work has been accepted and published at the \emph{IEEE ACSOS 2024} conference~\cite{DBLP:conf/acsos/FarabegoliVC24}.
 
 \subsubsection{AI-enhanced Pulverised Systems}
 
@@ -521,11 +569,10 @@ and computational load.
 This contribution has been accepted and presented at the \emph{Workshop ``From Objects to Agents'' 2024}~\cite{DBLP:conf/woa/DominiFAV24},
 and at the PhD Symposium of the \emph{IEEE International Conference on Autonomic Computing and Self-Organizing Systems}~\cite{DBLP:conf/acsos/Farabegoli24}.
 
-More consistent results are exercised in a subsequent work,
-where a concrete toolchain has been proposed showing good benefits in terms of power consumption and performance.
+Starting from this preliminary study,
+I've contributed to a more comprehensive work where a concrete toolchain has been proposed showing good benefits in terms of power consumption and performance.
 %
-This work has been submitted,
-and it is currently under review to the \emph{ACM Transactions on Autonomous and Adaptive Systems}.
+This work has been submitted to the \emph{ACM Transactions on Autonomous and Adaptive Systems}.
 
 % Additionally,
 % I developed a semi-formalisation of a novel approach to support the relocation of pulverisation components based on \ac{rl} and \ac{gnn}.
@@ -564,7 +611,7 @@ I've published and submitted the following papers:
     \printbibliography[heading=none]
 \end{refsection}
 
-\subsubsection{Submitted and Under Review}
+\subsubsection{Submitted for Publication}
 \begin{enumerate}
     \item \fullcite{taas-heterognn} --- Submitted work and currently under review to \emph{ACM Transactions on Autonomous and Adaptive Systems} 
     \item \fullcite{coordination-prolog} --- Submitted work to \emph{COORDINATION 2025 -- International Conference on Coordination Models and Languages}
@@ -639,8 +686,7 @@ I've attended the following conferences and workshops:
 
 \section{Research Roadmap}
 \label{sec:future-directions}
-As follows,
-a tentative roadmap for the next years of my PhD is presented.
+The following section outlines a tentative roadmap for the next years of my PhD.
 %
 The roadmap is divided into three main research directions: \emph{Models},
 \emph{Deployment Platforms},
@@ -688,8 +734,6 @@ Base on works like~\cite{DBLP:journals/jss/BertolottiCOC24},
 which do not directly apply the approach to distributed systems,
 I will investigare a ``common'' core of the platform that can be ``reified'' into different platforms,
 enabling a seamless interoperability among different devices and programming languages.
-%
-This direction will be a pillar for managing the heterogeneity of the \ac{ecc}.
 
 \subsection{Dynamic Reconfiguration}
 Dynamic relocation and deployments have covered a significant part of my research activities~\cite{DBLP:journals/fgcs/FarabegoliPCV24,DBLP:journals/iot/FarabegoliPCV24}

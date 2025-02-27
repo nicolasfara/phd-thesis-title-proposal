@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 800 600"
+   version="1.1"
+   id="svg39"
+   sodipodi:docname="methodology-overview.svg"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview39"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.2210515"
+     inkscape:cx="408.25468"
+     inkscape:cy="321.44426"
+     inkscape:window-width="2560"
+     inkscape:window-height="1362"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="pillars" />
+  <!-- Background -->
+  <!-- Title -->
+  <text
+     x="400"
+     y="40"
+     font-family="Arial"
+     font-size="24"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="#333"
+     id="text1">
+    Overall Methodology for Engineering CAS in the ECC
+  </text>
+  <!-- Three Main Pillars -->
+  <g
+     id="pillars">
+    <!-- Cross-language Model -->
+    <rect
+       x="62"
+       y="100"
+       width="180"
+       height="80"
+       rx="10"
+       ry="10"
+       fill="#4285f4"
+       opacity="0.8"
+       id="rect2" />
+    <text
+       x="151.94531"
+       y="135.71875"
+       font-family="Arial"
+       font-size="16px"
+       font-weight="bold"
+       text-anchor="middle"
+       fill="#ffffff"
+       id="text2"><tspan
+         sodipodi:role="line"
+         id="tspan44"
+         x="151.94531"
+         y="135.71875">Cross-language</tspan><tspan
+         sodipodi:role="line"
+         id="tspan45"
+         x="151.94531"
+         y="155.71875">Model</tspan></text>
+    <!-- Infrastructure Heterogeneity -->
+    <rect
+       x="310"
+       y="100"
+       width="180"
+       height="80"
+       rx="10"
+       ry="10"
+       fill="#ea4335"
+       opacity="0.8"
+       id="rect3" />
+    <text
+       x="399.50781"
+       y="124.10156"
+       font-family="Arial"
+       font-size="16px"
+       font-weight="bold"
+       text-anchor="middle"
+       fill="#ffffff"
+       id="text3"><tspan
+         sodipodi:role="line"
+         id="tspan41"
+         x="399.50781"
+         y="124.10156">ECC and</tspan><tspan
+         sodipodi:role="line"
+         x="399.50781"
+         y="144.10156"
+         id="tspan43">Infrastructure</tspan><tspan
+         sodipodi:role="line"
+         id="tspan42"
+         x="399.50781"
+         y="164.10156">Heterogeneity</tspan></text>
+    <!-- Dynamic Reconfiguration -->
+    <rect
+       x="558"
+       y="100"
+       width="180"
+       height="80"
+       rx="10"
+       ry="10"
+       fill="#fbbc05"
+       opacity="0.8"
+       id="rect4" />
+    <text
+       x="610"
+       y="145"
+       font-family="Arial"
+       font-size="16px"
+       font-weight="bold"
+       text-anchor="middle"
+       fill="#ffffff"
+       id="text5"
+       style="white-space:pre;inline-size:147.082;display:inline"
+       transform="translate(37.863281,-20.863285)"
+       xml:space="preserve"><tspan
+         x="610"
+         y="145"
+         id="tspan1">Dynamic<tspan
+   y="145"
+   id="tspan2"> </tspan></tspan><tspan
+         x="610"
+         y="165.00001"
+         id="tspan3">Reconfiguration
+</tspan><tspan
+         x="610"
+         y="185.00001"
+         id="tspan4">and Deployment</tspan></text>
+    <path
+       style="fill:#19234b;stroke:#35a853;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.8"
+       d="m 400,499 v 22"
+       id="path45" />
+  </g>
+  <!-- Components and Connections -->
+  <!-- Cross-language Model Components -->
+  <rect
+     x="32"
+     y="220"
+     width="240"
+     height="160"
+     rx="5"
+     ry="5"
+     fill="#e8f0fe"
+     stroke="#4285f4"
+     stroke-width="2"
+     id="rect6" />
+  <text
+     x="152"
+     y="240"
+     font-family="Arial"
+     font-size="14px"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="#4285f4"
+     id="text7">DSL and Language Abstraction</text>
+  <rect
+     x="52"
+     y="260"
+     width="90"
+     height="40"
+     rx="5"
+     ry="5"
+     fill="#c6dafc"
+     stroke="#4285f4"
+     stroke-width="1"
+     id="rect7" />
+  <text
+     x="97"
+     y="285"
+     font-family="Arial"
+     font-size="12px"
+     text-anchor="middle"
+     fill="#333333"
+     id="text8">DSL</text>
+  <rect
+     x="162"
+     y="260"
+     width="90"
+     height="40"
+     rx="5"
+     ry="5"
+     fill="#c6dafc"
+     stroke="#4285f4"
+     stroke-width="1"
+     id="rect8" />
+  <text
+     x="207"
+     y="285"
+     font-family="Arial"
+     font-size="12px"
+     text-anchor="middle"
+     fill="#333333"
+     id="text9">Transpilation</text>
+  <rect
+     x="52"
+     y="320"
+     width="90"
+     height="40"
+     rx="5"
+     ry="5"
+     fill="#c6dafc"
+     stroke="#4285f4"
+     stroke-width="1"
+     id="rect9" />
+  <text
+     x="96.712891"
+     y="335.38281"
+     font-family="Arial"
+     font-size="12px"
+     text-anchor="middle"
+     fill="#333333"
+     id="text10"><tspan
+       sodipodi:role="line"
+       id="tspan60"
+       x="96.712891"
+       y="335.38281">Language</tspan><tspan
+       sodipodi:role="line"
+       id="tspan61"
+       x="96.712891"
+       y="350.38281">Independence</tspan></text>
+  <rect
+     x="162"
+     y="320"
+     width="90"
+     height="40"
+     rx="5"
+     ry="5"
+     fill="#c6dafc"
+     stroke="#4285f4"
+     stroke-width="1"
+     id="rect11" />
+  <text
+     x="206.94434"
+     y="336.78906"
+     font-family="Arial"
+     font-size="12px"
+     text-anchor="middle"
+     fill="#333333"
+     id="text12"><tspan
+       sodipodi:role="line"
+       id="tspan62"
+       x="206.94434"
+       y="336.78906">Functional</tspan><tspan
+       sodipodi:role="line"
+       id="tspan63"
+       x="206.94434"
+       y="351.78906">Correctness</tspan></text>
+  <!-- Infrastructure Heterogeneity Components -->
+  <rect
+     x="280"
+     y="220"
+     width="240"
+     height="160"
+     rx="5"
+     ry="5"
+     fill="#fce8e6"
+     stroke="#ea4335"
+     stroke-width="2"
+     id="rect13" />
+  <text
+     x="400"
+     y="240"
+     font-family="Arial"
+     font-size="14"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="#ea4335"
+     id="text14">Multitier Programming Models</text>
+  <rect
+     x="300"
+     y="260"
+     width="90"
+     height="40"
+     rx="5"
+     ry="5"
+     fill="#f4c7c3"
+     stroke="#ea4335"
+     stroke-width="1"
+     id="rect14" />
+  <text
+     x="345"
+     y="285"
+     font-family="Arial"
+     font-size="12"
+     text-anchor="middle"
+     fill="#333"
+     id="text15">Pulverization</text>
+  <rect
+     x="410"
+     y="260"
+     width="90"
+     height="40"
+     rx="5"
+     ry="5"
+     fill="#f4c7c3"
+     stroke="#ea4335"
+     stroke-width="1"
+     id="rect15" />
+  <text
+     x="455.08496"
+     y="276.78906"
+     font-family="Arial"
+     font-size="12px"
+     text-anchor="middle"
+     fill="#333333"
+     id="text16"><tspan
+       sodipodi:role="line"
+       id="tspan54"
+       x="455.08496"
+       y="276.78906">Communication</tspan><tspan
+       sodipodi:role="line"
+       id="tspan55"
+       x="455.08496"
+       y="291.78906">Patterns</tspan></text>
+  <rect
+     x="300"
+     y="320"
+     width="90"
+     height="40"
+     rx="5"
+     ry="5"
+     fill="#f4c7c3"
+     stroke="#ea4335"
+     stroke-width="1"
+     id="rect17" />
+  <text
+     x="344.71289"
+     y="335.60254"
+     font-family="Arial"
+     font-size="12px"
+     text-anchor="middle"
+     fill="#333333"
+     id="text18"><tspan
+       sodipodi:role="line"
+       id="tspan58"
+       x="344.71289"
+       y="335.60254">Deployment</tspan><tspan
+       sodipodi:role="line"
+       id="tspan59"
+       x="344.71289"
+       y="350.60254">Independence</tspan></text>
+  <rect
+     x="410"
+     y="320"
+     width="90"
+     height="40"
+     rx="5"
+     ry="5"
+     fill="#f4c7c3"
+     stroke="#ea4335"
+     stroke-width="1"
+     id="rect19" />
+  <text
+     x="454.94434"
+     y="335.44434"
+     font-family="Arial"
+     font-size="12px"
+     text-anchor="middle"
+     fill="#333333"
+     id="text20"><tspan
+       sodipodi:role="line"
+       id="tspan56"
+       x="454.94434"
+       y="335.44434">System</tspan><tspan
+       sodipodi:role="line"
+       id="tspan57"
+       x="454.94434"
+       y="350.44434">Specifications</tspan></text>
+  <!-- Dynamic Reconfiguration Components -->
+  <rect
+     x="528"
+     y="220"
+     width="240"
+     height="160"
+     rx="5"
+     ry="5"
+     fill="#fef7e0"
+     stroke="#fbbc05"
+     stroke-width="2"
+     id="rect21" />
+  <text
+     x="648"
+     y="240"
+     font-family="Arial"
+     font-size="14px"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="#fbbc05"
+     id="text22">AI-Driven Techniques</text>
+  <rect
+     x="548"
+     y="260"
+     width="90"
+     height="40"
+     rx="5"
+     ry="5"
+     fill="#feefc3"
+     stroke="#fbbc05"
+     stroke-width="1"
+     id="rect22" />
+  <text
+     x="592.55176"
+     y="275.60254"
+     font-family="Arial"
+     font-size="12px"
+     text-anchor="middle"
+     fill="#333333"
+     id="text23"><tspan
+       sodipodi:role="line"
+       id="tspan52"
+       x="592.55176"
+       y="275.60254">Reinforcement</tspan><tspan
+       sodipodi:role="line"
+       id="tspan53"
+       x="592.55176"
+       y="290.60254">Learning</tspan></text>
+  <rect
+     x="658"
+     y="260"
+     width="90"
+     height="40"
+     rx="5"
+     ry="5"
+     fill="#feefc3"
+     stroke="#fbbc05"
+     stroke-width="1"
+     id="rect24" />
+  <text
+     x="702.55176"
+     y="275.38281"
+     font-family="Arial"
+     font-size="12px"
+     text-anchor="middle"
+     fill="#333333"
+     id="text25"><tspan
+       sodipodi:role="line"
+       id="tspan46"
+       x="702.55176"
+       y="275.38281">Resource</tspan><tspan
+       sodipodi:role="line"
+       id="tspan47"
+       x="702.55176"
+       y="290.38281">Management</tspan></text>
+  <rect
+     x="548"
+     y="320"
+     width="90"
+     height="40"
+     rx="5"
+     ry="5"
+     fill="#feefc3"
+     stroke="#fbbc05"
+     stroke-width="1"
+     id="rect26" />
+  <text
+     x="592.77441"
+     y="335.60254"
+     font-family="Arial"
+     font-size="12px"
+     text-anchor="middle"
+     fill="#333333"
+     id="text27"><tspan
+       sodipodi:role="line"
+       id="tspan50"
+       x="592.77441"
+       y="335.60254">Predictive</tspan><tspan
+       sodipodi:role="line"
+       id="tspan51"
+       x="592.77441"
+       y="350.60254">Scaling</tspan></text>
+  <rect
+     x="658"
+     y="320"
+     width="90"
+     height="40"
+     rx="5"
+     ry="5"
+     fill="#feefc3"
+     stroke="#fbbc05"
+     stroke-width="1"
+     id="rect28" />
+  <text
+     x="702.89746"
+     y="335.44434"
+     font-family="Arial"
+     font-size="12px"
+     text-anchor="middle"
+     fill="#333333"
+     id="text29"><tspan
+       sodipodi:role="line"
+       id="tspan48"
+       x="702.89746"
+       y="335.44434">System</tspan><tspan
+       sodipodi:role="line"
+       id="tspan49"
+       x="702.89746"
+       y="350.44434">Reconfiguration</tspan></text>
+  <!-- Integration Layer -->
+  <rect
+     x="150"
+     y="420"
+     width="500"
+     height="80"
+     rx="10"
+     ry="10"
+     fill="#34a853"
+     opacity="0.8"
+     id="rect30" />
+  <text
+     x="400"
+     y="465"
+     font-family="Arial"
+     font-size="18"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="white"
+     id="text31">Comprehensive CAS Framework for the ECC</text>
+  <!-- Connecting arrows -->
+  <path
+     d="m 152,180 v 29.45404"
+     stroke="#4285f4"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arrowhead)"
+     id="path31"
+     style="marker-end:url(#marker64)"
+     sodipodi:nodetypes="cc" />
+  <path
+     d="m 400,180 v 29.66496"
+     stroke="#ea4335"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arrowhead)"
+     id="path32"
+     style="marker-end:url(#marker63)"
+     sodipodi:nodetypes="cc" />
+  <path
+     d="m 648,180 v 30.0868"
+     stroke="#fbbc05"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arrowhead)"
+     id="path33"
+     style="marker-end:url(#RoundedArrow)"
+     sodipodi:nodetypes="cc" />
+  <path
+     d="M190,380 L190,420"
+     stroke="#4285f4"
+     stroke-width="2"
+     fill="none"
+     id="path34" />
+  <path
+     d="M400,380 L400,420"
+     stroke="#ea4335"
+     stroke-width="2"
+     fill="none"
+     id="path36" />
+  <path
+     d="M610,380 L610,420"
+     stroke="#fbbc05"
+     stroke-width="2"
+     fill="none"
+     id="path37" />
+  <!-- Validation and Deployment Section -->
+  <rect
+     x="150"
+     y="520"
+     width="500"
+     height="60"
+     rx="10"
+     ry="10"
+     fill="#9e9e9e"
+     opacity="0.8"
+     id="rect38" />
+  <text
+     x="400"
+     y="555"
+     font-family="Arial"
+     font-size="16px"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="#ffffff"
+     id="text38"
+     style="white-space:pre;inline-size:347.732;display:inline"
+     transform="translate(-0.0546875,-10.863292)"
+     xml:space="preserve"><tspan
+       x="400"
+       y="555"
+       id="tspan5">Validation: Simulation-based Experiments<tspan
+   y="555"
+   id="tspan6"> </tspan></tspan><tspan
+       x="400"
+       y="575.00002"
+       id="tspan7">and Real-world Deployments</tspan></text>
+  <!-- Arrow definitions -->
+  <defs
+     id="defs39">
+    <marker
+       style="overflow:visible"
+       id="marker64"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Rounded arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="m -0.21114562,-4.1055728 6.42229122,3.21114561 a 1,1 90 0 1 0,1.78885438 L -0.21114562,4.1055728 A 1.236068,1.236068 31.717474 0 1 -2,3 v -6 a 1.236068,1.236068 148.28253 0 1 1.78885438,-1.1055728 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path64" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker63"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Rounded arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="m -0.21114562,-4.1055728 6.42229122,3.21114561 a 1,1 90 0 1 0,1.78885438 L -0.21114562,4.1055728 A 1.236068,1.236068 31.717474 0 1 -2,3 v -6 a 1.236068,1.236068 148.28253 0 1 1.78885438,-1.1055728 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path63" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="RoundedArrow"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Rounded arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="m -0.21114562,-4.1055728 6.42229122,3.21114561 a 1,1 90 0 1 0,1.78885438 L -0.21114562,4.1055728 A 1.236068,1.236068 31.717474 0 1 -2,3 v -6 a 1.236068,1.236068 148.28253 0 1 1.78885438,-1.1055728 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path8" />
+    </marker>
+    <marker
+       id="arrowhead"
+       markerWidth="10"
+       markerHeight="7"
+       refX="10"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#333"
+         id="polygon39" />
+    </marker>
+  </defs>
+</svg>
